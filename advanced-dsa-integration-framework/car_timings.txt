@@ -1,0 +1,136 @@
+--- NEW SIMULATION SESSION ---
+Vehicle 15     (Gujranwala->Lahore)     arrived in 1.200000 ticks.    Path: Gujranwala -> Lahore
+Vehicle 14     (Sialkot->Lahore)        arrived in 1.700000 ticks.    Path: Sialkot -> Gujranwala -> Lahore
+Vehicle 1      (Sialkot->Faisalabad)    arrived in 2.600000 ticks.    Path: Sialkot -> Gujranwala -> Faisalabad
+Vehicle 12     (Sialkot->Faisalabad)    arrived in 2.600000 ticks.    Path: Sialkot -> Gujranwala -> Faisalabad
+Vehicle 18     (Multan->Lahore)         arrived in 2.899999 ticks.    Path: Multan -> Lahore
+Vehicle 1008   (Quetta->Multan)         arrived in 2.899999 ticks.    Path: Quetta -> Multan
+Vehicle 4      (Multan->Faisalabad)     arrived in 2.999999 ticks.    Path: Multan -> Faisalabad
+Vehicle 2      (Faisalabad->Peshawar)   arrived in 4.099998 ticks.    Path: Faisalabad -> Peshawar
+Vehicle 9      (DG Khan->Quetta)        arrived in 4.099998 ticks.    Path: DG Khan -> Quetta
+Vehicle 10     (Islamabad->Gujranwala)  arrived in 4.199998 ticks.    Path: Islamabad -> Lahore -> Gujranwala
+Vehicle 13     (Multan->Sialkot)        arrived in 4.499998 ticks.    Path: Multan -> Lahore -> Gujranwala -> Sialkot
+Vehicle 7      (Sialkot->Islamabad)     arrived in 5.499997 ticks.    Path: Sialkot -> Gujranwala -> Lahore -> Islamabad
+Vehicle 1012   (DG Khan->Lahore)        arrived in 5.699997 ticks.    Path: DG Khan -> Multan -> Lahore
+Vehicle 8      (Lahore->DG Khan)        arrived in 5.799997 ticks.    Path: Lahore -> Multan -> DG Khan
+Vehicle 1001   (DG Khan->Lahore)        arrived in 5.799997 ticks.    Path: DG Khan -> Multan -> Lahore
+Vehicle 6      (Peshawar->Multan)       arrived in 6.999996 ticks.    Path: Peshawar -> Faisalabad -> Multan
+Vehicle 17     (Quetta->Karachi)        arrived in 7.099996 ticks.    Path: Quetta -> Karachi
+Vehicle 1000   (Quetta->Islamabad)      arrived in 7.199996 ticks.    Path: Quetta -> Multan -> Islamabad
+Vehicle 1010   (Quetta->Islamabad)      arrived in 7.199996 ticks.    Path: Quetta -> Multan -> Islamabad
+Vehicle 1014   (DG Khan->Islamabad)     arrived in 7.199996 ticks.    Path: DG Khan -> Multan -> Islamabad
+Vehicle 5      (Peshawar->Sialkot)      arrived in 7.599995 ticks.    Path: Peshawar -> Lahore -> Gujranwala -> Sialkot
+Vehicle 20     (Quetta->Faisalabad)     arrived in 7.599995 ticks.    Path: Quetta -> Multan -> Faisalabad
+Vehicle 1002   (Quetta->Lahore)         arrived in 7.599995 ticks.    Path: Quetta -> Multan -> Lahore
+Vehicle 1004   (Sukkur->Islamabad)      arrived in 7.699995 ticks.    Path: Sukkur -> Multan -> Islamabad
+Vehicle 1009   (Quetta->Islamabad)      arrived in 7.699995 ticks.    Path: Quetta -> Multan -> Islamabad
+Vehicle 1011   (Sukkur->Islamabad)      arrived in 7.699995 ticks.    Path: Sukkur -> Multan -> Islamabad
+Vehicle 1013   (Quetta->Lahore)         arrived in 7.699995 ticks.    Path: Quetta -> Multan -> Lahore
+Vehicle 1023   (Sukkur->Multan)         arrived in 2.899999 ticks.    Path: Sukkur -> Multan
+Vehicle 3      (Sukkur->Gujranwala)     arrived in 8.599997 ticks.    Path: Sukkur -> Multan -> Lahore -> Gujranwala
+Vehicle 1003   (Karachi->Lahore)        arrived in 8.599997 ticks.    Path: Karachi -> Lahore
+Vehicle 1015   (DG Khan->Multan)        arrived in 3.999998 ticks.    Path: DG Khan -> Multan
+Vehicle 1027   (DG Khan->Multan)        arrived in 3.999998 ticks.    Path: DG Khan -> Multan
+Vehicle 16     (Karachi->Gujranwala)    arrived in 9.500000 ticks.    Path: Karachi -> Lahore -> Gujranwala
+Vehicle 1006   (Karachi->Islamabad)     arrived in 9.800001 ticks.    Path: Karachi -> Islamabad
+Vehicle 1007   (Karachi->Islamabad)     arrived in 10.000002 ticks.   Path: Karachi -> Islamabad
+Vehicle 19     (Sialkot->Karachi)       arrived in 10.400003 ticks.   Path: Sialkot -> Gujranwala -> Lahore -> Karachi
+Vehicle 1033   (Sukkur->Lahore)         arrived in 5.799997 ticks.    Path: Sukkur -> Multan -> Lahore
+Vehicle 1025   (Quetta->Multan)         arrived in 5.999997 ticks.    Path: Quetta -> Multan
+Vehicle 1022   (Sukkur->Islamabad)      arrived in 6.399996 ticks.    Path: Sukkur -> Multan -> Islamabad
+Vehicle 1005   (Karachi->Multan)        arrived in 11.700008 ticks.   Path: Karachi -> Quetta -> Multan
+Vehicle 1019   (DG Khan->Lahore)        arrived in 6.799996 ticks.    Path: DG Khan -> Multan -> Lahore
+Vehicle 1020   (DG Khan->Lahore)        arrived in 6.799996 ticks.    Path: DG Khan -> Multan -> Lahore
+Vehicle 1026   (DG Khan->Islamabad)     arrived in 6.799996 ticks.    Path: DG Khan -> Multan -> Islamabad
+Vehicle 1028   (DG Khan->Lahore)        arrived in 6.899996 ticks.    Path: DG Khan -> Multan -> Lahore
+Vehicle 11     (Sukkur->Karachi)        arrived in 12.200010 ticks.   Path: Sukkur -> Quetta -> Karachi
+Vehicle 1036   (Quetta->Multan)         arrived in 2.899999 ticks.    Path: Quetta -> Multan
+Vehicle 1038   (Sukkur->Multan)         arrived in 2.899999 ticks.    Path: Sukkur -> Multan
+Vehicle 1041   (Sukkur->Multan)         arrived in 2.899999 ticks.    Path: Sukkur -> Multan
+Vehicle 1051   (Sukkur->Multan)         arrived in 2.899999 ticks.    Path: Sukkur -> Multan
+Vehicle 1054   (Quetta->Multan)         arrived in 2.899999 ticks.    Path: Quetta -> Multan
+Vehicle 1034   (Sukkur->Multan)         arrived in 2.999999 ticks.    Path: Sukkur -> Multan
+Vehicle 1047   (DG Khan->Multan)        arrived in 2.999999 ticks.    Path: DG Khan -> Multan
+Vehicle 1030   (Karachi->Lahore)        arrived in 8.499996 ticks.    Path: Karachi -> Lahore
+Vehicle 1018   (Karachi->Lahore)        arrived in 8.599997 ticks.    Path: Karachi -> Lahore
+Vehicle 1016   (Quetta->Islamabad)      arrived in 8.799997 ticks.    Path: Quetta -> Multan -> Islamabad
+Vehicle 1017   (Quetta->Islamabad)      arrived in 8.799997 ticks.    Path: Quetta -> Multan -> Islamabad
+Vehicle 1021   (Quetta->Lahore)         arrived in 8.799997 ticks.    Path: Quetta -> Multan -> Lahore
+Vehicle 1024   (Quetta->Lahore)         arrived in 8.799997 ticks.    Path: Quetta -> Multan -> Lahore
+Vehicle 1029   (Quetta->Islamabad)      arrived in 8.899998 ticks.    Path: Quetta -> Multan -> Islamabad
+Vehicle 1032   (Karachi->Multan)        arrived in 10.000002 ticks.   Path: Karachi -> Quetta -> Multan
+Vehicle 1035   (Quetta->Multan)         arrived in 4.999998 ticks.    Path: Quetta -> Multan
+Vehicle 1048   (Quetta->Lahore)         arrived in 5.699997 ticks.    Path: Quetta -> Multan -> Lahore
+Vehicle 1040   (Sukkur->Islamabad)      arrived in 5.799997 ticks.    Path: Sukkur -> Multan -> Islamabad
+Vehicle 1042   (DG Khan->Lahore)        arrived in 5.799997 ticks.    Path: DG Khan -> Multan -> Lahore
+Vehicle 1043   (Sukkur->Lahore)         arrived in 5.799997 ticks.    Path: Sukkur -> Multan -> Lahore
+Vehicle 1049   (DG Khan->Islamabad)     arrived in 5.799997 ticks.    Path: DG Khan -> Multan -> Islamabad
+Vehicle 1052   (DG Khan->Islamabad)     arrived in 5.799997 ticks.    Path: DG Khan -> Multan -> Islamabad
+Vehicle 1031   (Karachi->Islamabad)     arrived in 11.000006 ticks.   Path: Karachi -> Islamabad
+Vehicle 1053   (DG Khan->Lahore)        arrived in 5.999997 ticks.    Path: DG Khan -> Multan -> Lahore
+Vehicle 1056   (DG Khan->Lahore)        arrived in 5.999997 ticks.    Path: DG Khan -> Multan -> Lahore
+Vehicle 1037   (Quetta->Islamabad)      arrived in 7.799995 ticks.    Path: Quetta -> Multan -> Islamabad
+Vehicle 1050   (Quetta->Lahore)         arrived in 7.799995 ticks.    Path: Quetta -> Multan -> Lahore
+Vehicle 1055   (Quetta->Islamabad)      arrived in 7.899995 ticks.    Path: Quetta -> Multan -> Islamabad
+Vehicle 1064   (Quetta->Multan)         arrived in 2.899999 ticks.    Path: Quetta -> Multan
+Vehicle 1067   (Sukkur->Multan)         arrived in 2.899999 ticks.    Path: Sukkur -> Multan
+Vehicle 1065   (Sukkur->Multan)         arrived in 2.999999 ticks.    Path: Sukkur -> Multan
+Vehicle 1078   (Sukkur->Multan)         arrived in 3.099999 ticks.    Path: Sukkur -> Multan
+Vehicle 1045   (Karachi->Lahore)        arrived in 8.499996 ticks.    Path: Karachi -> Lahore
+Vehicle 1044   (Karachi->Lahore)        arrived in 8.699997 ticks.    Path: Karachi -> Lahore
+Vehicle 1046   (Karachi->Lahore)        arrived in 8.699997 ticks.    Path: Karachi -> Lahore
+Vehicle 1039   (Karachi->Multan)        arrived in 10.100002 ticks.   Path: Karachi -> Quetta -> Multan
+Vehicle 1080   (Quetta->Multan)         arrived in 5.199997 ticks.    Path: Quetta -> Multan
+Vehicle 1070   (Quetta->Islamabad)      arrived in 5.699997 ticks.    Path: Quetta -> Multan -> Islamabad
+Vehicle 1079   (Quetta->Islamabad)      arrived in 5.699997 ticks.    Path: Quetta -> Multan -> Islamabad
+Vehicle 1058   (DG Khan->Islamabad)     arrived in 5.799997 ticks.    Path: DG Khan -> Multan -> Islamabad
+Vehicle 1061   (DG Khan->Islamabad)     arrived in 5.799997 ticks.    Path: DG Khan -> Multan -> Islamabad
+Vehicle 1062   (Sukkur->Islamabad)      arrived in 5.799997 ticks.    Path: Sukkur -> Multan -> Islamabad
+Vehicle 1063   (Sukkur->Lahore)         arrived in 5.799997 ticks.    Path: Sukkur -> Multan -> Lahore
+Vehicle 1066   (DG Khan->Islamabad)     arrived in 5.799997 ticks.    Path: DG Khan -> Multan -> Islamabad
+Vehicle 1068   (Sukkur->Lahore)         arrived in 5.799997 ticks.    Path: Sukkur -> Multan -> Lahore
+Vehicle 1073   (DG Khan->Lahore)        arrived in 5.799997 ticks.    Path: DG Khan -> Multan -> Lahore
+Vehicle 1074   (DG Khan->Islamabad)     arrived in 5.899997 ticks.    Path: DG Khan -> Multan -> Islamabad
+Vehicle 1075   (DG Khan->Lahore)        arrived in 5.899997 ticks.    Path: DG Khan -> Multan -> Lahore
+Vehicle 1076   (Sukkur->Lahore)         arrived in 5.899997 ticks.    Path: Sukkur -> Multan -> Lahore
+Vehicle 1060   (Quetta->Islamabad)      arrived in 7.899995 ticks.    Path: Quetta -> Multan -> Islamabad
+Vehicle 1069   (Quetta->Lahore)         arrived in 7.899995 ticks.    Path: Quetta -> Multan -> Lahore
+Vehicle 1071   (Quetta->Islamabad)      arrived in 7.899995 ticks.    Path: Quetta -> Multan -> Islamabad
+Vehicle 1089   (Sukkur->Multan)         arrived in 2.899999 ticks.    Path: Sukkur -> Multan
+Vehicle 1084   (DG Khan->Multan)        arrived in 2.999999 ticks.    Path: DG Khan -> Multan
+Vehicle 1086   (DG Khan->Multan)        arrived in 2.999999 ticks.    Path: DG Khan -> Multan
+Vehicle 1087   (Sukkur->Multan)         arrived in 2.999999 ticks.    Path: Sukkur -> Multan
+Vehicle 1090   (DG Khan->Multan)        arrived in 2.999999 ticks.    Path: DG Khan -> Multan
+Vehicle 1091   (DG Khan->Multan)        arrived in 2.999999 ticks.    Path: DG Khan -> Multan
+Vehicle 1092   (Sukkur->Multan)         arrived in 2.999999 ticks.    Path: Sukkur -> Multan
+Vehicle 1100   (DG Khan->Multan)        arrived in 2.999999 ticks.    Path: DG Khan -> Multan
+Vehicle 1103   (DG Khan->Multan)        arrived in 3.099999 ticks.    Path: DG Khan -> Multan
+Vehicle 1104   (DG Khan->Multan)        arrived in 3.099999 ticks.    Path: DG Khan -> Multan
+Vehicle 1057   (Karachi->Multan)        arrived in 10.000002 ticks.   Path: Karachi -> Quetta -> Multan
+Vehicle 1059   (Karachi->Multan)        arrived in 10.000002 ticks.   Path: Karachi -> Quetta -> Multan
+Vehicle 1072   (Karachi->Multan)        arrived in 10.000002 ticks.   Path: Karachi -> Quetta -> Multan
+Vehicle 1077   (Karachi->Multan)        arrived in 10.000002 ticks.   Path: Karachi -> Quetta -> Multan
+Vehicle 1083   (Quetta->Lahore)         arrived in 5.699997 ticks.    Path: Quetta -> Multan -> Lahore
+Vehicle 1095   (Sukkur->Lahore)         arrived in 5.699997 ticks.    Path: Sukkur -> Multan -> Lahore
+Vehicle 1098   (Quetta->Lahore)         arrived in 5.699997 ticks.    Path: Quetta -> Multan -> Lahore
+Vehicle 1102   (DG Khan->Lahore)        arrived in 5.799997 ticks.    Path: DG Khan -> Multan -> Lahore
+Vehicle 1093   (Quetta->Islamabad)      arrived in 5.899997 ticks.    Path: Quetta -> Multan -> Islamabad
+Vehicle 1097   (DG Khan->Islamabad)     arrived in 5.899997 ticks.    Path: DG Khan -> Multan -> Islamabad
+Vehicle 1099   (DG Khan->Islamabad)     arrived in 5.899997 ticks.    Path: DG Khan -> Multan -> Islamabad
+Vehicle 1081   (Quetta->Lahore)         arrived in 7.799995 ticks.    Path: Quetta -> Multan -> Lahore
+Vehicle 1085   (Quetta->Lahore)         arrived in 7.799995 ticks.    Path: Quetta -> Multan -> Lahore
+Vehicle 1094   (Quetta->Lahore)         arrived in 7.899995 ticks.    Path: Quetta -> Multan -> Lahore
+Vehicle 1109   (Quetta->Multan)         arrived in 2.899999 ticks.    Path: Quetta -> Multan
+Vehicle 1115   (Sukkur->Multan)         arrived in 2.999999 ticks.    Path: Sukkur -> Multan
+Vehicle 1107   (DG Khan->Multan)        arrived in 3.199999 ticks.    Path: DG Khan -> Multan
+Vehicle 1114   (DG Khan->Multan)        arrived in 3.199999 ticks.    Path: DG Khan -> Multan
+Vehicle 1082   (Karachi->Lahore)        arrived in 8.599997 ticks.    Path: Karachi -> Lahore
+Vehicle 1088   (Karachi->Islamabad)     arrived in 9.800001 ticks.    Path: Karachi -> Islamabad
+Vehicle 1096   (Karachi->Multan)        arrived in 10.200003 ticks.   Path: Karachi -> Quetta -> Multan
+Vehicle 1101   (Karachi->Multan)        arrived in 10.200003 ticks.   Path: Karachi -> Quetta -> Multan
+Vehicle 1110   (Quetta->Multan)         arrived in 5.199997 ticks.    Path: Quetta -> Multan
+Vehicle 1118   (Sukkur->Islamabad)      arrived in 5.799997 ticks.    Path: Sukkur -> Multan -> Islamabad
+Vehicle 1105   (DG Khan->Lahore)        arrived in 6.099997 ticks.    Path: DG Khan -> Multan -> Lahore
+Vehicle 1111   (DG Khan->Lahore)        arrived in 6.099997 ticks.    Path: DG Khan -> Multan -> Lahore
+Vehicle 1112   (Quetta->Lahore)         arrived in 6.099997 ticks.    Path: Quetta -> Multan -> Lahore
+Vehicle 1119   (DG Khan->Lahore)        arrived in 6.099997 ticks.    Path: DG Khan -> Multan -> Lahore
