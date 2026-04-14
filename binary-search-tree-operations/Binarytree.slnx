@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Binarytree.vcxproj" Id="5107e6c8-ea9e-48a3-afb7-8ca15574dd17" />
+</Solution>
