@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="practice_iterator.vcxproj" Id="f4545de6-febc-40ae-a30e-fe8866a9de41" />
+</Solution>
