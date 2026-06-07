@@ -1,0 +1,45 @@
+# Compiled Binaries & Libraries
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+*.obj
+*.o
+*.a
+*.lib
+*.pdb
+*.ilk
+*.idb
+
+# Build Directories & Output
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+build/
+
+# IDE Files
+.vs/
+*.user
+*.suo
+*.sln.docstates
+*.sdf
+*.opensdf
+*.db
+*.opendb
+*.tlog
+*.mcp
+*.mcs
+*.mcw
+*.layout
+
+# System & Temp Files
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log
+*.tmp
