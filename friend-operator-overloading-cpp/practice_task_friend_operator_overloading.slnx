@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="practice_task_friend_operator_overloading.vcxproj" Id="7a25b71f-1eab-4261-98ab-9ffb4f3a86c8" />
+</Solution>
