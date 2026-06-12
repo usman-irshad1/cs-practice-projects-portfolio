@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Grapgh.vcxproj" Id="db0d5bd7-4625-4691-ad1c-5469609f13cf" />
+</Solution>
