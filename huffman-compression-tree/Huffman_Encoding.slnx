@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Huffman_Encoding.vcxproj" Id="a1de1726-0a21-430a-9325-686df72c577c" />
+</Solution>
