@@ -1,0 +1,8 @@
+high equ 0x31
+MOVLW 6eh
+MOVWF high
+MOVLW 4ch
+SUBFW high, 1
+bnn jump
+NEGF high, 1
+jump

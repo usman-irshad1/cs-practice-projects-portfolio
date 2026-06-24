@@ -1,0 +1,11 @@
+<map id="HUFFMAN_Encoding_1.cpp" name="HUFFMAN_Encoding_1.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="61,5,248,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,77,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,32,75,74,72,69,132,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="100,80,139,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="151,31,134,68,130,64,146,34"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="162,80,216,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="162,30,179,67,174,65,159,35"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="240,80,306,107"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="176,30,242,71,237,72,174,35"/>
+</map>

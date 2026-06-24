@@ -1,0 +1,50 @@
+// Task1_home_task.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+using namespace std;
+
+struct Ticket{
+    int ticketID; string customerName; string issueType; int  priority;
+    static int id;
+    Ticket() {
+        ticketID = id++;
+        customerName = "";
+        issueType = "";
+        priority = 0;
+
+    }
+};
+
+
+class HNode {
+    Ticket data;
+    HNode* next;
+    public:
+        HNode() {
+            data = Ticket();
+            next = nullptr;
+        }
+    
+        void setData(Ticket d) {
+            data = d;
+        }
+        Ticket getData() {
+            return data;
+        }
+
+       
+        void setNext(HNode* n) {
+            next = n;
+        }
+
+        HNode* getNext() {
+            return next;
+        }
+
+};
+int Ticket::id = 0;
+int main()
+{
+    std::cout << "Hello World!\n";
+}
