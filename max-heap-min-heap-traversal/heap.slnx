@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="heap.vcxproj" Id="ce59bd4d-6211-4b24-bff0-07f098586ba3" />
+</Solution>
