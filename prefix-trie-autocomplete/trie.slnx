@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="trie.vcxproj" Id="e6b29a90-f9b7-4183-83e1-c864e460a869" />
+</Solution>
