@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="TRIE_task.vcxproj" Id="1021a3c2-9569-4f35-81b3-bcea3be13e88" />
+</Solution>
