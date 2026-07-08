@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="SORTING_algos.vcxproj" Id="2fe08741-da8f-4f60-9cdf-ac4fee66e431" />
+</Solution>
