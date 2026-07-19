@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="linked_list.vcxproj" Id="3f1de45d-7bff-4112-8f33-8f0afb7c4f7b" />
+</Solution>
