@@ -1,0 +1,241 @@
+[FIFO] Request #0 | Addr: 0x1000 | VPN: 1 | Op: W
+[FIFO] Request #1 | Addr: 0x2000 | VPN: 2 | Op: R
+[FIFO] Request #2 | Addr: 0x3000 | VPN: 3 | Op: R
+[FIFO] Request #3 | Addr: 0x4000 | VPN: 4 | Op: R
+[FIFO] Request #4 | Addr: 0x5000 | VPN: 5 | Op: R
+[FIFO] Request #5 | Addr: 0x6000 | VPN: 6 | Op: W
+[FIFO] Request #6 | Addr: 0x7000 | VPN: 7 | Op: R
+[FIFO] Request #7 | Addr: 0x8000 | VPN: 8 | Op: R
+[FIFO] Request #8 | Addr: 0x9000 | VPN: 9 | Op: R
+[FIFO] Request #9 | Addr: 0xa000 | VPN: 10 | Op: R
+[FIFO] Request #10 | Addr: 0xb000 | VPN: 11 | Op: W
+[FIFO] Request #11 | Addr: 0xc000 | VPN: 12 | Op: R
+[FIFO] Request #12 | Addr: 0xd000 | VPN: 13 | Op: R
+[FIFO] Request #13 | Addr: 0xe000 | VPN: 14 | Op: R
+[FIFO] Request #14 | Addr: 0xf000 | VPN: 15 | Op: R
+[FIFO] Request #15 | Addr: 0x10000 | VPN: 16 | Op: W
+[FIFO] Request #16 | Addr: 0x11000 | VPN: 17 | Op: R
+[FIFO] Request #17 | Addr: 0x12000 | VPN: 18 | Op: R
+[FIFO] Request #18 | Addr: 0x13000 | VPN: 19 | Op: R
+[FIFO] Request #19 | Addr: 0x14000 | VPN: 20 | Op: R
+[FIFO] Request #20 | Addr: 0x15000 | VPN: 21 | Op: W
+[FIFO] Request #21 | Addr: 0x16000 | VPN: 22 | Op: R
+[FIFO] Request #22 | Addr: 0x17000 | VPN: 23 | Op: R
+[FIFO] Request #23 | Addr: 0x18000 | VPN: 24 | Op: R
+[FIFO] Request #24 | Addr: 0x19000 | VPN: 25 | Op: R
+[FIFO] Request #25 | Addr: 0x1a000 | VPN: 26 | Op: W
+[FIFO] Request #26 | Addr: 0x1b000 | VPN: 27 | Op: R
+[FIFO] Request #27 | Addr: 0x1c000 | VPN: 28 | Op: R
+[FIFO] Request #28 | Addr: 0x1d000 | VPN: 29 | Op: R
+[FIFO] Request #29 | Addr: 0x1e000 | VPN: 30 | Op: R
+[FIFO] Request #30 | Addr: 0x1f000 | VPN: 31 | Op: W
+[FIFO] Request #31 | Addr: 0x20000 | VPN: 32 | Op: R
+[FIFO] Request #32 | Addr: 0x21000 | VPN: 33 | Op: R
+[FIFO] Request #33 | Addr: 0x22000 | VPN: 34 | Op: R
+[FIFO] Request #34 | Addr: 0x23000 | VPN: 35 | Op: R
+[FIFO] Request #35 | Addr: 0x24000 | VPN: 36 | Op: W
+[FIFO] Request #36 | Addr: 0x25000 | VPN: 37 | Op: R
+[FIFO] Request #37 | Addr: 0x26000 | VPN: 38 | Op: R
+[FIFO] Request #38 | Addr: 0x27000 | VPN: 39 | Op: R
+[FIFO] Request #39 | Addr: 0x28000 | VPN: 40 | Op: R
+[FIFO] Request #40 | Addr: 0x29000 | VPN: 41 | Op: W
+[FIFO] Request #41 | Addr: 0x2a000 | VPN: 42 | Op: R
+[FIFO] Request #42 | Addr: 0x2b000 | VPN: 43 | Op: R
+[FIFO] Request #43 | Addr: 0x2c000 | VPN: 44 | Op: R
+[FIFO] Request #44 | Addr: 0x2d000 | VPN: 45 | Op: R
+[FIFO] Request #45 | Addr: 0x2e000 | VPN: 46 | Op: W
+[FIFO] Request #46 | Addr: 0x2f000 | VPN: 47 | Op: R
+[FIFO] Request #47 | Addr: 0x30000 | VPN: 48 | Op: R
+[FIFO] Request #48 | Addr: 0x31000 | VPN: 49 | Op: R
+[FIFO] Request #49 | Addr: 0x32000 | VPN: 50 | Op: R
+[FIFO] Request #50 | Addr: 0x33000 | VPN: 51 | Op: W
+[FIFO] Request #51 | Addr: 0x34000 | VPN: 52 | Op: R
+[FIFO] Request #52 | Addr: 0x35000 | VPN: 53 | Op: R
+[FIFO] Request #53 | Addr: 0x36000 | VPN: 54 | Op: R
+[FIFO] Request #54 | Addr: 0x37000 | VPN: 55 | Op: R
+[FIFO] Request #55 | Addr: 0x38000 | VPN: 56 | Op: W
+[FIFO] Request #56 | Addr: 0x39000 | VPN: 57 | Op: R
+[FIFO] Request #57 | Addr: 0x3a000 | VPN: 58 | Op: R
+[FIFO] Request #58 | Addr: 0x3b000 | VPN: 59 | Op: R
+[FIFO] Request #59 | Addr: 0x3c000 | VPN: 60 | Op: R
+[FIFO] Request #60 | Addr: 0x3d000 | VPN: 61 | Op: W
+[FIFO] Request #61 | Addr: 0x3e000 | VPN: 62 | Op: R
+[FIFO] Request #62 | Addr: 0x3f000 | VPN: 63 | Op: R
+[FIFO] Request #63 | Addr: 0x40000 | VPN: 64 | Op: R
+[FIFO] Request #64 | Addr: 0x1000 | VPN: 1 | Op: R0
+[FIFO] Request #65 | Addr: 0x2000 | VPN: 2 | Op: W1
+[FIFO] Request #66 | Addr: 0x3000 | VPN: 3 | Op: R2
+[FIFO] Request #67 | Addr: 0x4000 | VPN: 4 | Op: R3
+[FIFO] Request #68 | Addr: 0x5000 | VPN: 5 | Op: R4
+[FIFO] Request #69 | Addr: 0x1000 | VPN: 1 | Op: R0
+[FIFO] Request #70 | Addr: 0x2000 | VPN: 2 | Op: W1
+[FIFO] Request #71 | Addr: 0x3000 | VPN: 3 | Op: R2
+[FIFO] Request #72 | Addr: 0x4000 | VPN: 4 | Op: R3
+[FIFO] Request #73 | Addr: 0x5000 | VPN: 5 | Op: R4
+[FIFO] Request #74 | Addr: 0x1000 | VPN: 1 | Op: R0
+[FIFO] Request #75 | Addr: 0x2000 | VPN: 2 | Op: W1
+[FIFO] Request #76 | Addr: 0x3000 | VPN: 3 | Op: R2
+[FIFO] Request #77 | Addr: 0x4000 | VPN: 4 | Op: R3
+[FIFO] Request #78 | Addr: 0x5000 | VPN: 5 | Op: R4
+[FIFO] Request #79 | Addr: 0x41000 | VPN: 65 | Op: R
+EVICTION NOTICE : VPN 1 was DIRTY.Writing back to Disk
+[FIFO] Request #80 | Addr: 0x42000 | VPN: 66 | Op: W
+EVICTION NOTICE : VPN 2 was DIRTY.Writing back to Disk
+[FIFO] Request #81 | Addr: 0x43000 | VPN: 67 | Op: R
+EVICTION NOTICE : VPN 3 was clean no need to write back to Disk
+[FIFO] Request #82 | Addr: 0x44000 | VPN: 68 | Op: R
+EVICTION NOTICE : VPN 4 was clean no need to write back to Disk
+[FIFO] Request #83 | Addr: 0x45000 | VPN: 69 | Op: R
+EVICTION NOTICE : VPN 5 was clean no need to write back to Disk
+[FIFO] Request #84 | Addr: 0x46000 | VPN: 70 | Op: R
+EVICTION NOTICE : VPN 6 was DIRTY.Writing back to Disk
+[FIFO] Request #85 | Addr: 0x47000 | VPN: 71 | Op: W
+EVICTION NOTICE : VPN 7 was clean no need to write back to Disk
+[FIFO] Request #86 | Addr: 0x48000 | VPN: 72 | Op: R
+EVICTION NOTICE : VPN 8 was clean no need to write back to Disk
+[FIFO] Request #87 | Addr: 0x49000 | VPN: 73 | Op: R
+EVICTION NOTICE : VPN 9 was clean no need to write back to Disk
+[FIFO] Request #88 | Addr: 0x4a000 | VPN: 74 | Op: R
+EVICTION NOTICE : VPN 10 was clean no need to write back to Disk
+[FIFO] Request #89 | Addr: 0x4b000 | VPN: 75 | Op: R
+EVICTION NOTICE : VPN 11 was DIRTY.Writing back to Disk
+[FIFO] Request #90 | Addr: 0x4c000 | VPN: 76 | Op: W
+EVICTION NOTICE : VPN 12 was clean no need to write back to Disk
+[FIFO] Request #91 | Addr: 0x4d000 | VPN: 77 | Op: R
+EVICTION NOTICE : VPN 13 was clean no need to write back to Disk
+[FIFO] Request #92 | Addr: 0x4e000 | VPN: 78 | Op: R
+EVICTION NOTICE : VPN 14 was clean no need to write back to Disk
+[FIFO] Request #93 | Addr: 0x4f000 | VPN: 79 | Op: R
+EVICTION NOTICE : VPN 15 was clean no need to write back to Disk
+[FIFO] Request #94 | Addr: 0x50000 | VPN: 80 | Op: R
+EVICTION NOTICE : VPN 16 was DIRTY.Writing back to Disk
+[FIFO] Request #95 | Addr: 0x51000 | VPN: 81 | Op: W
+EVICTION NOTICE : VPN 17 was clean no need to write back to Disk
+[FIFO] Request #96 | Addr: 0x52000 | VPN: 82 | Op: R
+EVICTION NOTICE : VPN 18 was clean no need to write back to Disk
+[FIFO] Request #97 | Addr: 0x53000 | VPN: 83 | Op: R
+EVICTION NOTICE : VPN 19 was clean no need to write back to Disk
+[FIFO] Request #98 | Addr: 0x54000 | VPN: 84 | Op: R
+EVICTION NOTICE : VPN 20 was clean no need to write back to Disk
+[FIFO] Request #99 | Addr: 0x55000 | VPN: 85 | Op: R
+EVICTION NOTICE : VPN 21 was DIRTY.Writing back to Disk
+[FIFO] Request #100 | Addr: 0x1000 | VPN: 1 | Op: W
+EVICTION NOTICE : VPN 22 was clean no need to write back to Disk
+[FIFO] Request #101 | Addr: 0x2000 | VPN: 2 | Op: R
+EVICTION NOTICE : VPN 23 was clean no need to write back to Disk
+[FIFO] Request #102 | Addr: 0x3000 | VPN: 3 | Op: R
+EVICTION NOTICE : VPN 24 was clean no need to write back to Disk
+[FIFO] Request #103 | Addr: 0x4000 | VPN: 4 | Op: R
+EVICTION NOTICE : VPN 25 was clean no need to write back to Disk
+[FIFO] Request #104 | Addr: 0x5000 | VPN: 5 | Op: R
+EVICTION NOTICE : VPN 26 was DIRTY.Writing back to Disk
+[FIFO] Request #105 | Addr: 0x1000 | VPN: 1 | Op: W21
+[FIFO] Request #106 | Addr: 0x2000 | VPN: 2 | Op: R22
+[FIFO] Request #107 | Addr: 0x3000 | VPN: 3 | Op: R23
+[FIFO] Request #108 | Addr: 0x4000 | VPN: 4 | Op: R24
+[FIFO] Request #109 | Addr: 0x5000 | VPN: 5 | Op: R25
+[FIFO] Request #110 | Addr: 0x56000 | VPN: 86 | Op: W
+EVICTION NOTICE : VPN 27 was clean no need to write back to Disk
+[FIFO] Request #111 | Addr: 0x57000 | VPN: 87 | Op: R
+EVICTION NOTICE : VPN 28 was clean no need to write back to Disk
+[FIFO] Request #112 | Addr: 0x58000 | VPN: 88 | Op: R
+EVICTION NOTICE : VPN 29 was clean no need to write back to Disk
+[FIFO] Request #113 | Addr: 0x59000 | VPN: 89 | Op: R
+EVICTION NOTICE : VPN 30 was clean no need to write back to Disk
+[FIFO] Request #114 | Addr: 0x5a000 | VPN: 90 | Op: R
+EVICTION NOTICE : VPN 31 was DIRTY.Writing back to Disk
+[FIFO] Request #115 | Addr: 0x5b000 | VPN: 91 | Op: W
+EVICTION NOTICE : VPN 32 was clean no need to write back to Disk
+[FIFO] Request #116 | Addr: 0x5c000 | VPN: 92 | Op: R
+EVICTION NOTICE : VPN 33 was clean no need to write back to Disk
+[FIFO] Request #117 | Addr: 0x5d000 | VPN: 93 | Op: R
+EVICTION NOTICE : VPN 34 was clean no need to write back to Disk
+[FIFO] Request #118 | Addr: 0x5e000 | VPN: 94 | Op: R
+EVICTION NOTICE : VPN 35 was clean no need to write back to Disk
+[FIFO] Request #119 | Addr: 0x5f000 | VPN: 95 | Op: R
+EVICTION NOTICE : VPN 36 was DIRTY.Writing back to Disk
+[FIFO] Request #120 | Addr: 0x60000 | VPN: 96 | Op: W
+EVICTION NOTICE : VPN 37 was clean no need to write back to Disk
+[FIFO] Request #121 | Addr: 0x61000 | VPN: 97 | Op: R
+EVICTION NOTICE : VPN 38 was clean no need to write back to Disk
+[FIFO] Request #122 | Addr: 0x62000 | VPN: 98 | Op: R
+EVICTION NOTICE : VPN 39 was clean no need to write back to Disk
+[FIFO] Request #123 | Addr: 0x63000 | VPN: 99 | Op: R
+EVICTION NOTICE : VPN 40 was clean no need to write back to Disk
+[FIFO] Request #124 | Addr: 0x64000 | VPN: 100 | Op: R
+EVICTION NOTICE : VPN 41 was DIRTY.Writing back to Disk
+[FIFO] Request #125 | Addr: 0x65000 | VPN: 101 | Op: W
+EVICTION NOTICE : VPN 42 was clean no need to write back to Disk
+[FIFO] Request #126 | Addr: 0x66000 | VPN: 102 | Op: R
+EVICTION NOTICE : VPN 43 was clean no need to write back to Disk
+[FIFO] Request #127 | Addr: 0x67000 | VPN: 103 | Op: R
+EVICTION NOTICE : VPN 44 was clean no need to write back to Disk
+[FIFO] Request #128 | Addr: 0x68000 | VPN: 104 | Op: R
+EVICTION NOTICE : VPN 45 was clean no need to write back to Disk
+[FIFO] Request #129 | Addr: 0x69000 | VPN: 105 | Op: R
+EVICTION NOTICE : VPN 46 was DIRTY.Writing back to Disk
+[FIFO] Request #130 | Addr: 0x1000 | VPN: 1 | Op: W21
+[FIFO] Request #131 | Addr: 0x2000 | VPN: 2 | Op: R22
+[FIFO] Request #132 | Addr: 0x3000 | VPN: 3 | Op: R23
+[FIFO] Request #133 | Addr: 0x4000 | VPN: 4 | Op: R24
+[FIFO] Request #134 | Addr: 0x5000 | VPN: 5 | Op: R25
+[FIFO] Request #135 | Addr: 0x1000 | VPN: 1 | Op: W21
+[FIFO] Request #136 | Addr: 0x2000 | VPN: 2 | Op: R22
+[FIFO] Request #137 | Addr: 0x3000 | VPN: 3 | Op: R23
+[FIFO] Request #138 | Addr: 0x4000 | VPN: 4 | Op: R24
+[FIFO] Request #139 | Addr: 0x5000 | VPN: 5 | Op: R25
+[FIFO] Request #140 | Addr: 0x1000 | VPN: 1 | Op: W21
+[FIFO] Request #141 | Addr: 0x2000 | VPN: 2 | Op: R22
+[FIFO] Request #142 | Addr: 0x3000 | VPN: 3 | Op: R23
+[FIFO] Request #143 | Addr: 0x4000 | VPN: 4 | Op: R24
+[FIFO] Request #144 | Addr: 0x5000 | VPN: 5 | Op: R25
+[FIFO] Request #145 | Addr: 0x6a000 | VPN: 106 | Op: W
+EVICTION NOTICE : VPN 47 was clean no need to write back to Disk
+[FIFO] Request #146 | Addr: 0x6b000 | VPN: 107 | Op: R
+EVICTION NOTICE : VPN 48 was clean no need to write back to Disk
+[FIFO] Request #147 | Addr: 0x6c000 | VPN: 108 | Op: R
+EVICTION NOTICE : VPN 49 was clean no need to write back to Disk
+[FIFO] Request #148 | Addr: 0x6d000 | VPN: 109 | Op: R
+EVICTION NOTICE : VPN 50 was clean no need to write back to Disk
+[FIFO] Request #149 | Addr: 0x6e000 | VPN: 110 | Op: R
+EVICTION NOTICE : VPN 51 was DIRTY.Writing back to Disk
+[FIFO] Request #150 | Addr: 0x6f000 | VPN: 111 | Op: W
+EVICTION NOTICE : VPN 52 was clean no need to write back to Disk
+[FIFO] Request #151 | Addr: 0x70000 | VPN: 112 | Op: R
+EVICTION NOTICE : VPN 53 was clean no need to write back to Disk
+[FIFO] Request #152 | Addr: 0x71000 | VPN: 113 | Op: R
+EVICTION NOTICE : VPN 54 was clean no need to write back to Disk
+[FIFO] Request #153 | Addr: 0x72000 | VPN: 114 | Op: R
+EVICTION NOTICE : VPN 55 was clean no need to write back to Disk
+[FIFO] Request #154 | Addr: 0x73000 | VPN: 115 | Op: R
+EVICTION NOTICE : VPN 56 was DIRTY.Writing back to Disk
+[FIFO] Request #155 | Addr: 0x1000 | VPN: 1 | Op: W21
+[FIFO] Request #156 | Addr: 0x2000 | VPN: 2 | Op: R22
+[FIFO] Request #157 | Addr: 0x3000 | VPN: 3 | Op: R23
+[FIFO] Request #158 | Addr: 0x4000 | VPN: 4 | Op: R24
+[FIFO] Request #159 | Addr: 0x5000 | VPN: 5 | Op: R25
+[FIFO] Request #160 | Addr: 0x74000 | VPN: 116 | Op: W
+EVICTION NOTICE : VPN 57 was clean no need to write back to Disk
+[FIFO] Request #161 | Addr: 0x75000 | VPN: 117 | Op: R
+EVICTION NOTICE : VPN 58 was clean no need to write back to Disk
+[FIFO] Request #162 | Addr: 0x76000 | VPN: 118 | Op: R
+EVICTION NOTICE : VPN 59 was clean no need to write back to Disk
+[FIFO] Request #163 | Addr: 0x77000 | VPN: 119 | Op: R
+EVICTION NOTICE : VPN 60 was clean no need to write back to Disk
+[FIFO] Request #164 | Addr: 0x78000 | VPN: 120 | Op: R
+EVICTION NOTICE : VPN 61 was DIRTY.Writing back to Disk
+[FIFO] Request #165 | Addr: 0x79000 | VPN: 121 | Op: W
+EVICTION NOTICE : VPN 62 was clean no need to write back to Disk
+[FIFO] Request #166 | Addr: 0x7a000 | VPN: 122 | Op: R
+EVICTION NOTICE : VPN 63 was clean no need to write back to Disk
+[FIFO] Request #167 | Addr: 0x7b000 | VPN: 123 | Op: R
+EVICTION NOTICE : VPN 64 was clean no need to write back to Disk
+[FIFO] Request #168 | Addr: 0x7c000 | VPN: 124 | Op: R
+EVICTION NOTICE : VPN 65 was clean no need to write back to Disk
+[FIFO] Request #169 | Addr: 0x7d000 | VPN: 125 | Op: R
+EVICTION NOTICE : VPN 66 was DIRTY.Writing back to Disk
+[FIFO] Request #170 | Addr: 0x1000 | VPN: 1 | Op: W21
+[FIFO] Request #171 | Addr: 0x2000 | VPN: 2 | Op: R22
+[FIFO] Request #172 | Addr: 0x3000 | VPN: 3 | Op: R23
+[FIFO] Request #173 | Addr: 0x4000 | VPN: 4 | Op: R24
+[FIFO] Request #174 | Addr: 0x5000 | VPN: 5 | Op: R25

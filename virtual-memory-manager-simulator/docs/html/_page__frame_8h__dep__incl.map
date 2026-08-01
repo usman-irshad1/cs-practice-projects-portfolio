@@ -1,0 +1,22 @@
+<map id="Page_frame.h" name="Page_frame.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="214,5,316,32"/>
+<area shape="rect" id="Node000002" href="$_drawer_8h.html" title=" " alt="" coords="22,80,97,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,40,97,82,95,77,216,35"/>
+<area shape="rect" id="Node000005" href="$_page__frame_8cpp.html" title=" " alt="" coords="122,80,238,107"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="241,41,196,82,193,77,237,44"/>
+<area shape="rect" id="Node000006" href="$_virtual___memory__manager_8h.html" title=" " alt="" coords="262,80,442,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="292,40,339,80,334,80,291,45"/>
+<area shape="rect" id="Node000008" href="$mem__visualization_8h.html" title=" " alt="" coords="466,80,606,107"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="327,34,491,79,486,80,326,39"/>
+<area shape="rect" id="Node000003" href="$_drawer_8cpp.html" title=" " alt="" coords="142,155,230,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,112,167,153,162,155,94,117"/>
+<area shape="rect" id="Node000004" href="$_o_s__project_8cpp.html" title=" " alt="" coords="5,155,117,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="62,121,63,155,58,154,58,124"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="287,114,113,157,111,151,285,108"/>
+<area shape="rect" id="Node000007" href="$_virtual___memory__manager_8cpp.html" title=" " alt="" coords="254,155,449,181"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="354,121,354,156,350,153,350,124"/>
+<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="461,111,243,157,231,160,231,154,242,152,456,110"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="492,112,385,157,383,151,487,113"/>
+<area shape="rect" id="Node000009" href="$mem__visualization_8cpp.html" title=" " alt="" coords="473,155,628,181"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="543,120,550,156,546,153,540,124"/>
+</map>

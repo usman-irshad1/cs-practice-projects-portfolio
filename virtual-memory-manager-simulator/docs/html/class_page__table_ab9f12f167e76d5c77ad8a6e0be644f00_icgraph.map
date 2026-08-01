@@ -1,0 +1,9 @@
+<map id="Page_table::getPhysicalAddress" name="Page_table::getPhysicalAddress">
+<area shape="rect" id="Node000001" title=" " alt="" coords="320,43,530,69"/>
+<area shape="rect" id="Node000002" href="$struct_virtual___memory__manager.html#a61742b1bab01707169548f7af30fed3e" title=" " alt="" coords="103,5,272,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="302,41,273,40,273,34,307,41"/>
+<area shape="rect" id="Node000004" href="$class_drawer.html#aa61ad2b7dc21be9997b4e4d344339135" title=" " alt="" coords="127,72,248,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="307,71,248,81,248,75,302,71"/>
+<area shape="rect" id="Node000003" href="$_o_s__project_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,13,55,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,28,56,29,54,24,89,25"/>
+</map>

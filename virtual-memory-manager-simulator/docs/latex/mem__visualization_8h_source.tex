@@ -1,0 +1,143 @@
+\doxysection{mem\+\_\+visualization.\+h}
+\hypertarget{mem__visualization_8h_source}{}\label{mem__visualization_8h_source}\doxymbox{\hyperlink{mem__visualization_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ MEM\_VISUALIZATION\_H}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ MEM\_VISUALIZATION\_H}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <raylib.h>}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_t_l_b__table_8h}{TLB\_table.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_page__frame_8h}{Page\_frame.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00010}\doxymbox{\hyperlink{class_memory_visualizer}{00010}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_memory_visualizer_af169aed797efc64531cc47105569b293}{MemoryVisualizer}}\ \{}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00011}00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00012}\doxymbox{\hyperlink{class_memory_visualizer_af1824ddb185f2542ebbea7dfac9dd51e}{00012}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_memory_visualizer_af1824ddb185f2542ebbea7dfac9dd51e}{screenWidth}};}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00013}\doxymbox{\hyperlink{class_memory_visualizer_a5ea1cc31083e092cdce580ec9eeee985}{00013}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_memory_visualizer_a5ea1cc31083e092cdce580ec9eeee985}{screenHeight}};}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00015}00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00016}\doxymbox{\hyperlink{class_memory_visualizer_af169aed797efc64531cc47105569b293}{00016}}\ \ \ \ \ \doxymbox{\hyperlink{class_memory_visualizer_af169aed797efc64531cc47105569b293}{MemoryVisualizer}}(\textcolor{keywordtype}{int}\ width\ =\ 1200,\ \textcolor{keywordtype}{int}\ height\ =\ 800)}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00017}00017\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_memory_visualizer_af1824ddb185f2542ebbea7dfac9dd51e}{screenWidth}}(width),\ \doxymbox{\hyperlink{class_memory_visualizer_a5ea1cc31083e092cdce580ec9eeee985}{screenHeight}}(height)\ \{}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00018}00018\ \ \ \ \ \ \ \ \ InitWindow(\doxymbox{\hyperlink{class_memory_visualizer_af1824ddb185f2542ebbea7dfac9dd51e}{screenWidth}},\ \doxymbox{\hyperlink{class_memory_visualizer_a5ea1cc31083e092cdce580ec9eeee985}{screenHeight}},\ \textcolor{stringliteral}{"{}OS\ Virtual\ Memory\ Visualizer"{}});}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00019}00019\ \ \ \ \ \ \ \ \ SetTargetFPS(240);\ \textcolor{comment}{//\ High\ FPS\ for\ smooth\ rendering}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00022}\doxymbox{\hyperlink{class_memory_visualizer_aa07ed3b2d6c0a517aef767cc8b96fa81}{00022}}\ \ \ \ \ \doxymbox{\hyperlink{class_memory_visualizer_aa07ed3b2d6c0a517aef767cc8b96fa81}{\string~MemoryVisualizer}}()\ \{\ CloseWindow();\ \}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00024}\doxymbox{\hyperlink{class_memory_visualizer_a2b1961c4bbb1154fb219c80fd8979d09}{00024}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_memory_visualizer_a2b1961c4bbb1154fb219c80fd8979d09}{IsRunning}}()\ \{\ \textcolor{keywordflow}{return}\ !WindowShouldClose();\ \}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00026}\doxymbox{\hyperlink{class_memory_visualizer_a9646d46ef27bb9d6db74692c0e9d233d}{00026}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_memory_visualizer_a9646d46ef27bb9d6db74692c0e9d233d}{Render}}(\doxymbox{\hyperlink{class_t_l_b}{TLB}}\&\ tlb,\ \doxymbox{\hyperlink{class_page__table}{Page\_table}}\&\ pt,\ \textcolor{keywordtype}{bool}\ lastAccessWasHit,\ \doxymbox{\hyperlink{struct_file_configuration}{FileConfiguration}}\&\ config,\ \textcolor{keywordtype}{int}\ lastAccessedIndex,\ std::string\ algoName)\ \{}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ BeginDrawing();}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ ClearBackground(RAYWHITE);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ LEFT\ PANEL:\ CONFIGURATION\ \&\ METRICS\ -\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00031}00031\ \ \ \ \ \ \ \ \ DrawRectangle(10,\ 10,\ 350,\ 780,\ Fade(LIGHTGRAY,\ 0.3f));}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ DrawRectangleLines(10,\ 10,\ 350,\ 780,\ DARKGRAY);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ DrawText(\textcolor{stringliteral}{"{}ALGORITHM:"{}},\ 25,\ 30,\ 22,\ BLACK);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00035}00035\ \ \ \ \ \ \ \ \ DrawText(algoName.c\_str(),\ 25,\ 60,\ 24,\ MAROON);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00036}00036\ \ \ \ \ \ \ \ \ DrawLine(25,\ 90,\ 320,\ 90,\ DARKGRAY);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00038}00038\ \ \ \ \ \ \ \ \ DrawText(\textcolor{stringliteral}{"{}CONFIGURATION"{}},\ 25,\ 110,\ 20,\ BLACK);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ DrawText(TextFormat(\textcolor{stringliteral}{"{}RAM\ Size:\ \%llu\ B"{}},\ config.\doxymbox{\hyperlink{struct_file_configuration_a058fa1b738c70e9f85d24b6aa4dc6565}{physical\_size}}),\ 25,\ 140,\ 18,\ DARKBLUE);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ DrawText(TextFormat(\textcolor{stringliteral}{"{}Page\ Size:\ \%llu\ B"{}},\ config.\doxymbox{\hyperlink{struct_file_configuration_a11c64822271e5a06eae9f2fd8d4aae9e}{page\_size}}),\ 25,\ 170,\ 18,\ DARKBLUE);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00041}00041\ \ \ \ \ \ \ \ \ DrawText(TextFormat(\textcolor{stringliteral}{"{}TLB\ Slots:\ \%llu"{}},\ config.\doxymbox{\hyperlink{struct_file_configuration_a1862a00f413202ce462a20ea11557c6c}{TLB\_size}}),\ 25,\ 200,\ 18,\ DARKBLUE);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ DrawText(TextFormat(\textcolor{stringliteral}{"{}Latency:\ \%llu\ ns"{}},\ config.\doxymbox{\hyperlink{struct_file_configuration_a83793d02f6190b74a7353b9406aadec9}{latency}}),\ 25,\ 230,\ 18,\ DARKBLUE);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ DrawText(\textcolor{stringliteral}{"{}METRICS"{}},\ 25,\ 500,\ 22,\ BLACK);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ DrawLine(25,\ 525,\ 320,\ 525,\ DARKGRAY);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ DrawText(TextFormat(\textcolor{stringliteral}{"{}TLB\ Hits:\ \%d"{}},\ tlb.\doxymbox{\hyperlink{class_t_l_b_a576eb7b8c03b9a75dfeaf39284746b5e}{tlb\_hits}}),\ 25,\ 540,\ 20,\ DARKGREEN);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00047}00047\ \ \ \ \ \ \ \ \ DrawText(TextFormat(\textcolor{stringliteral}{"{}TLB\ Misses:\ \%d"{}},\ tlb.\doxymbox{\hyperlink{class_t_l_b_af311501088c323f27e6917bcb9937d11}{tlb\_misses}}),\ 25,\ 570,\ 20,\ MAROON);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00048}00048\ \ \ \ \ \ \ \ \ DrawText(TextFormat(\textcolor{stringliteral}{"{}RAM\ Reads:\ \%llu"{}},\ pt.\doxymbox{\hyperlink{class_page__table_af3ef0655beefd5f18ee4381df5a3f6a0}{ram\_read\_count}}),\ 25,\ 600,\ 20,\ DARKBLUE);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00049}00049\ \ \ \ \ \ \ \ \ DrawText(TextFormat(\textcolor{stringliteral}{"{}Dirty\ Evictions:\ \%llu"{}},\ pt.\doxymbox{\hyperlink{class_page__table_a74301c0af836bad46bbf7616cfa10a61}{dirty\_evictions}}),\ 25,\ 630,\ 20,\ RED);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00051}00051\ \ \ \ \ \ \ \ \ DrawText(\textcolor{stringliteral}{"{}TLB\ (VPN\ -\/>\ Frame)"{}},\ 380,\ 20,\ 20,\ BLACK);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ (int)config.\doxymbox{\hyperlink{struct_file_configuration_a1862a00f413202ce462a20ea11557c6c}{TLB\_size}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ Rectangle\ tlbRect\ =\ \{\ 380.0f,\ 60.0f\ +\ (i\ *\ 45),\ 320.0f,\ 40.0f\ \};}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ Color\ cellColor\ =\ RAYWHITE;}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ Color\ textColor\ =\ BLACK;}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ tlb.\doxymbox{\hyperlink{class_t_l_b_a5d7acd8a3d839c47e95d4bb44c848be3}{lastEvictedSlot}})\ \{}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cellColor\ =\ BLACK;}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ textColor\ =\ RAYWHITE;}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (i\ ==\ lastAccessedIndex)\ \{}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cellColor\ =\ lastAccessWasHit\ ?\ GREEN\ :\ RED;}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ textColor\ =\ RAYWHITE;}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ DrawRectangleRec(tlbRect,\ cellColor);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ DrawRectangleLinesEx(tlbRect,\ 2,\ DARKGRAY);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ entry\ =\ tlb.\doxymbox{\hyperlink{class_t_l_b_ae2768ee723228a4ad6892c40d8d323c7}{getEntryForVisual}}(i);\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entry.active)\ \{}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DrawText(TextFormat(\textcolor{stringliteral}{"{}VPN:\ \%llu\ -\/>\ F:\ \%llu"{}},\ entry.vpn,\ entry.frame),}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tlbRect.x\ +\ 10,\ tlbRect.y\ +\ 12,\ 18,\ textColor);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DrawText(\textcolor{stringliteral}{"{}Empty\ Slot"{}},\ tlbRect.x\ +\ 10,\ tlbRect.y\ +\ 12,\ 18,\ Fade(GRAY,\ 0.5f));}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00079}00079\ \ \ \ \ \ \ \ \ DrawText(\textcolor{stringliteral}{"{}Physical\ RAM\ Page\ Frames"{}},\ 720,\ 20,\ 20,\ BLACK);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cols\ =\ 5;}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ spacing\ =\ 85;}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ pt.\doxymbox{\hyperlink{class_page__table_a268fff938ab4a924f656d8b56248deb3}{max\_frames}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ row\ =\ i\ /\ cols;}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ col\ =\ i\ \%\ cols;}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ Rectangle\ rect\ =\ \{\ 720.0f\ +\ (col\ *\ (spacing\ +\ 10)),\ 60.0f\ +\ (row\ *\ (spacing\ +\ 10)),\ (float)spacing,\ (\textcolor{keywordtype}{float})spacing\ \};}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ Color\ frameColor\ =\ LIGHTGRAY;}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ pt.\doxymbox{\hyperlink{class_page__table_ae3aad7642dc8762e34c8c139137035e4}{lastEvictedFrame}})\ \{}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ frameColor\ =\ BLACK;\ \textcolor{comment}{//\ RAM\ Eviction\ indicator}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (i\ <\ pt.\doxymbox{\hyperlink{class_page__table_a985c1e5d5e17b0b4147404b46c697f4c}{frame\_count}})\ \{}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ frameColor\ =\ pt.\doxymbox{\hyperlink{class_page__table_a9d2bffd13650f18ec942425186124831}{isFrameDirty}}(i)\ ?\ RED\ :\ GREEN;\ \textcolor{comment}{//\ Dirty\ awareness}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ DrawRectangleRec(rect,\ frameColor);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ DrawRectangleLinesEx(rect,\ 2,\ DARKGRAY);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ physAddr\ =\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ long)i\ *\ config.\doxymbox{\hyperlink{struct_file_configuration_a11c64822271e5a06eae9f2fd8d4aae9e}{page\_size}};\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ Color\ labelColor\ =\ (frameColor.r\ +\ frameColor.g\ +\ frameColor.b\ <\ 300)\ ?\ WHITE\ :\ BLACK;}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ DrawText(TextFormat(\textcolor{stringliteral}{"{}F:\%d"{}},\ i),\ rect.x\ +\ 5,\ rect.y\ +\ 5,\ 12,\ labelColor);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ DrawText(TextFormat(\textcolor{stringliteral}{"{}0x\%llX"{}},\ physAddr),\ rect.x\ +\ 5,\ rect.y\ +\ rect.height\ -\/\ 15,\ 11,\ labelColor);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00109}00109\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00110}00110\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ legendX\ =\ 1000;}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00112}00112\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ legendY\ =\ 500;}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00114}00114\ \ \ \ \ \ \ \ \ DrawRectangle(legendX\ -\/\ 10,\ legendY\ -\/\ 10,\ 200,\ 250,\ Fade(LIGHTGRAY,\ 0.3f));}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00115}00115\ \ \ \ \ \ \ \ \ DrawRectangleLines(legendX\ -\/\ 10,\ legendY\ -\/\ 10,\ 200,\ 250,\ DARKGRAY);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00116}00116\ \ \ \ \ \ \ \ \ DrawText(\textcolor{stringliteral}{"{}LEGEND"{}},\ legendX\ +\ 45,\ legendY,\ 20,\ BLACK);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00117}00117\ \ \ \ \ \ \ \ \ DrawLine(legendX,\ legendY\ +\ 25,\ legendX\ +\ 180,\ legendY\ +\ 25,\ DARKGRAY);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00119}00119\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00120}00120\ \ \ \ \ \ \ \ \ DrawRectangle(legendX,\ legendY\ +\ 45,\ 20,\ 20,\ BLACK);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00121}00121\ \ \ \ \ \ \ \ \ DrawText(\textcolor{stringliteral}{"{}Eviction"{}},\ legendX\ +\ 30,\ legendY\ +\ 45,\ 18,\ BLACK);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00123}00123\ \ \ \ \ \ \ \ \ DrawRectangle(legendX,\ legendY\ +\ 85,\ 20,\ 20,\ GREEN);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00124}00124\ \ \ \ \ \ \ \ \ DrawText(\textcolor{stringliteral}{"{}Hit\ /\ Clean"{}},\ legendX\ +\ 30,\ legendY\ +\ 85,\ 18,\ BLACK);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00126}00126\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00127}00127\ \ \ \ \ \ \ \ \ DrawRectangle(legendX,\ legendY\ +\ 125,\ 20,\ 20,\ RED);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00128}00128\ \ \ \ \ \ \ \ \ DrawText(\textcolor{stringliteral}{"{}Miss\ /\ Dirty"{}},\ legendX\ +\ 30,\ legendY\ +\ 125,\ 18,\ BLACK);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00130}00130\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00131}00131\ \ \ \ \ \ \ \ \ DrawRectangle(legendX,\ legendY\ +\ 165,\ 20,\ 20,\ LIGHTGRAY);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00132}00132\ \ \ \ \ \ \ \ \ DrawRectangleLines(legendX,\ legendY\ +\ 165,\ 20,\ 20,\ DARKGRAY);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00133}00133\ \ \ \ \ \ \ \ \ DrawText(\textcolor{stringliteral}{"{}Empty\ Slot"{}},\ legendX\ +\ 30,\ legendY\ +\ 165,\ 18,\ BLACK);}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00134}00134\ \ \ \ \ \ \ \ \ EndDrawing();}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00135}00135\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00136}00136\ \};}
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{mem__visualization_8h_source_l00138}00138\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

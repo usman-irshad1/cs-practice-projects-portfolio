@@ -1,0 +1,393 @@
+\doxysection{TLB Class Reference}
+\hypertarget{class_t_l_b}{}\label{class_t_l_b}\index{TLB@{TLB}}
+
+
+{\ttfamily \+\#include $<$TLB\+\_\+table.\+h$>$}
+
+
+
+Collaboration diagram for TLB:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{class_t_l_b__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_t_l_b_adb95da018aae91ee6ff67db557c7b4e3}{TLB}} (\doxymbox{\hyperlink{struct_file_configuration}{File\+Configuration}} \&config)
+\item 
+void \doxymbox{\hyperlink{class_t_l_b_a714df63003cc57627c84fa47135b574d}{View\+\_\+table}} ()
+\item 
+void \doxymbox{\hyperlink{class_t_l_b_a07e223fbb12f9cd423bc1996411bdc15}{Insert\+\_\+with\+\_\+\+FIFO\+\_\+algo}} (unsigned long long virtual\+\_\+address\+\_\+key, unsigned long long physical\+\_\+memory\+\_\+value, bool valid\+\_\+bit\+\_\+value)
+\item 
+void \doxymbox{\hyperlink{class_t_l_b_a9a740409b977bdca99df6a697e59376f}{insert\+\_\+with\+\_\+\+LRU\+\_\+algo}} (unsigned long long virtual\+\_\+address\+\_\+key, unsigned long long physical\+\_\+memory\+\_\+frame, bool valid\+\_\+bit\+\_\+value)
+\item 
+bool \doxymbox{\hyperlink{class_t_l_b_ac184e51e58504f10d4a4662f10d0ac89}{find}} (unsigned long long virtual\+\_\+address\+\_\+key, unsigned long long \&physical\+\_\+memory\+\_\+value)
+\item 
+void \doxymbox{\hyperlink{class_t_l_b_a27fcea8e972cf8f385f57d015170f1e9}{perfomance\+\_\+metrics}} (unsigned long long ram\+\_\+latency, unsigned long long total\+\_\+ram\+\_\+reads, unsigned long long total\+\_\+ram\+\_\+writes, unsigned long long dirty\+\_\+evictions)
+\item 
+int \doxymbox{\hyperlink{class_t_l_b_ac8258805fe0d0cc736666702f2519a6e}{get\+File\+Count}} ()
+\item 
+bool \doxymbox{\hyperlink{class_t_l_b_a2b4e9c4020a46aa4eabe87d74bc3b62d}{find\+FIFOTLB}} (unsigned long long virtual\+\_\+address\+\_\+key, unsigned long long \&physical\+\_\+memory\+\_\+value)
+\item 
+void \doxymbox{\hyperlink{class_t_l_b_a3ced53e273a93ffc4c8c800e2ae2177a}{TLB\+\_\+\+Eviction}} (unsigned long long vpn)
+\item 
+\doxymbox{\hyperlink{struct_t_l_b_visual_entry}{TLBVisual\+Entry}} \doxymbox{\hyperlink{class_t_l_b_ae2768ee723228a4ad6892c40d8d323c7}{get\+Entry\+For\+Visual}} (int index)
+\item 
+int \doxymbox{\hyperlink{class_t_l_b_a836de7c6e6c909382a2792f1684376ad}{get\+VPNIndex}} (unsigned long long vpn)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_t_l_b_a8aa2d6e4fe33dc8484dcb24216224214}{request}}
+\item 
+int \doxymbox{\hyperlink{class_t_l_b_a576eb7b8c03b9a75dfeaf39284746b5e}{tlb\+\_\+hits}}
+\item 
+int \doxymbox{\hyperlink{class_t_l_b_af311501088c323f27e6917bcb9937d11}{tlb\+\_\+misses}}
+\item 
+int \doxymbox{\hyperlink{class_t_l_b_a8ee883b5952e95ba065c8cea98ccd132}{count}}
+\item 
+int \doxymbox{\hyperlink{class_t_l_b_a5d7acd8a3d839c47e95d4bb44c848be3}{last\+Evicted\+Slot}} = -\/1
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned long long \doxymbox{\hyperlink{class_t_l_b_ac96a8d0979bb45e394bef3290666322b}{cap}}
+\item 
+unordered\+\_\+map$<$ unsigned long long, \doxymbox{\hyperlink{struct_value}{Value}} $>$ \doxymbox{\hyperlink{class_t_l_b_ac17ab78c2408aa81ece8bbf25a02d1c7}{table}}
+\item 
+list$<$ unsigned long long $>$ \doxymbox{\hyperlink{class_t_l_b_a7663b2b317dec794317b1e5c0a71130b}{index\+\_\+for\+\_\+\+FIFO}}
+\item 
+unordered\+\_\+map$<$ unsigned long long, typename list$<$ unsigned long long $>$::\+iterator $>$ \doxymbox{\hyperlink{class_t_l_b_a95482da243f7659e2cf7c6887dda8c6d}{LRU\+\_\+map}}
+\item 
+list$<$ unsigned long long $>$ \doxymbox{\hyperlink{class_t_l_b_a128d7629f15da21298a3f4668fd0d882}{LRU\+\_\+queue}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8h_source_l00022}{22}} of file \doxymbox{\hyperlink{_t_l_b__table_8h_source}{TLB\+\_\+table.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_t_l_b_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_t_l_b_adb95da018aae91ee6ff67db557c7b4e3}\index{TLB@{TLB}!TLB@{TLB}}
+\index{TLB@{TLB}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{TLB()}{TLB()}}
+{\footnotesize\ttfamily \label{class_t_l_b_adb95da018aae91ee6ff67db557c7b4e3} 
+TLB::\+\+TLB (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_file_configuration}{File\+Configuration}} \&}]{config}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8cpp_source_l00011}{11}} of file \doxymbox{\hyperlink{_t_l_b__table_8cpp_source}{TLB\+\_\+table.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_t_l_b_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_t_l_b_ac184e51e58504f10d4a4662f10d0ac89}\index{TLB@{TLB}!find@{find}}
+\index{find@{find}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \label{class_t_l_b_ac184e51e58504f10d4a4662f10d0ac89} 
+bool TLB::\+find (\begin{DoxyParamCaption}\item[{unsigned long long}]{virtual\+\_\+address\+\_\+key}{, }\item[{unsigned long long \&}]{physical\+\_\+memory\+\_\+value}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8cpp_source_l00094}{94}} of file \doxymbox{\hyperlink{_t_l_b__table_8cpp_source}{TLB\+\_\+table.\+cpp}}.
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_l_b_ac184e51e58504f10d4a4662f10d0ac89_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_l_b_a2b4e9c4020a46aa4eabe87d74bc3b62d}\index{TLB@{TLB}!findFIFOTLB@{findFIFOTLB}}
+\index{findFIFOTLB@{findFIFOTLB}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{findFIFOTLB()}{findFIFOTLB()}}
+{\footnotesize\ttfamily \label{class_t_l_b_a2b4e9c4020a46aa4eabe87d74bc3b62d} 
+bool TLB::\+find\+FIFOTLB (\begin{DoxyParamCaption}\item[{unsigned long long}]{virtual\+\_\+address\+\_\+key}{, }\item[{unsigned long long \&}]{physical\+\_\+memory\+\_\+value}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8cpp_source_l00118}{118}} of file \doxymbox{\hyperlink{_t_l_b__table_8cpp_source}{TLB\+\_\+table.\+cpp}}.
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_l_b_a2b4e9c4020a46aa4eabe87d74bc3b62d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_l_b_ae2768ee723228a4ad6892c40d8d323c7}\index{TLB@{TLB}!getEntryForVisual@{getEntryForVisual}}
+\index{getEntryForVisual@{getEntryForVisual}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{getEntryForVisual()}{getEntryForVisual()}}
+{\footnotesize\ttfamily \label{class_t_l_b_ae2768ee723228a4ad6892c40d8d323c7} 
+\doxymbox{\hyperlink{struct_t_l_b_visual_entry}{TLBVisual\+Entry}} TLB::\+get\+Entry\+For\+Visual (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8h_source_l00054}{54}} of file \doxymbox{\hyperlink{_t_l_b__table_8h_source}{TLB\+\_\+table.\+h}}.
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_l_b_ae2768ee723228a4ad6892c40d8d323c7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_l_b_ac8258805fe0d0cc736666702f2519a6e}\index{TLB@{TLB}!getFileCount@{getFileCount}}
+\index{getFileCount@{getFileCount}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{getFileCount()}{getFileCount()}}
+{\footnotesize\ttfamily \label{class_t_l_b_ac8258805fe0d0cc736666702f2519a6e} 
+int TLB::\+get\+File\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8cpp_source_l00170}{170}} of file \doxymbox{\hyperlink{_t_l_b__table_8cpp_source}{TLB\+\_\+table.\+cpp}}.
+
+\Hypertarget{class_t_l_b_a836de7c6e6c909382a2792f1684376ad}\index{TLB@{TLB}!getVPNIndex@{getVPNIndex}}
+\index{getVPNIndex@{getVPNIndex}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{getVPNIndex()}{getVPNIndex()}}
+{\footnotesize\ttfamily \label{class_t_l_b_a836de7c6e6c909382a2792f1684376ad} 
+int TLB::\+get\+VPNIndex (\begin{DoxyParamCaption}\item[{unsigned long long}]{vpn}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8h_source_l00067}{67}} of file \doxymbox{\hyperlink{_t_l_b__table_8h_source}{TLB\+\_\+table.\+h}}.
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_l_b_a836de7c6e6c909382a2792f1684376ad_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_l_b_a07e223fbb12f9cd423bc1996411bdc15}\index{TLB@{TLB}!Insert\_with\_FIFO\_algo@{Insert\_with\_FIFO\_algo}}
+\index{Insert\_with\_FIFO\_algo@{Insert\_with\_FIFO\_algo}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{Insert\_with\_FIFO\_algo()}{Insert\_with\_FIFO\_algo()}}
+{\footnotesize\ttfamily \label{class_t_l_b_a07e223fbb12f9cd423bc1996411bdc15} 
+void TLB::\+\+Insert\+\_\+with\+\_\+\+FIFO\+\_\+algo (\begin{DoxyParamCaption}\item[{unsigned long long}]{virtual\+\_\+address\+\_\+key}{, }\item[{unsigned long long}]{physical\+\_\+memory\+\_\+value}{, }\item[{bool}]{valid\+\_\+bit\+\_\+value}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8cpp_source_l00028}{28}} of file \doxymbox{\hyperlink{_t_l_b__table_8cpp_source}{TLB\+\_\+table.\+cpp}}.
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_l_b_a07e223fbb12f9cd423bc1996411bdc15_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_l_b_a07e223fbb12f9cd423bc1996411bdc15_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_l_b_a9a740409b977bdca99df6a697e59376f}\index{TLB@{TLB}!insert\_with\_LRU\_algo@{insert\_with\_LRU\_algo}}
+\index{insert\_with\_LRU\_algo@{insert\_with\_LRU\_algo}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{insert\_with\_LRU\_algo()}{insert\_with\_LRU\_algo()}}
+{\footnotesize\ttfamily \label{class_t_l_b_a9a740409b977bdca99df6a697e59376f} 
+void TLB::\+insert\+\_\+with\+\_\+\+LRU\+\_\+algo (\begin{DoxyParamCaption}\item[{unsigned long long}]{virtual\+\_\+address\+\_\+key}{, }\item[{unsigned long long}]{physical\+\_\+memory\+\_\+frame}{, }\item[{bool}]{valid\+\_\+bit\+\_\+value}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8cpp_source_l00054}{54}} of file \doxymbox{\hyperlink{_t_l_b__table_8cpp_source}{TLB\+\_\+table.\+cpp}}.
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_l_b_a9a740409b977bdca99df6a697e59376f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_l_b_a9a740409b977bdca99df6a697e59376f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_l_b_a27fcea8e972cf8f385f57d015170f1e9}\index{TLB@{TLB}!perfomance\_metrics@{perfomance\_metrics}}
+\index{perfomance\_metrics@{perfomance\_metrics}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{perfomance\_metrics()}{perfomance\_metrics()}}
+{\footnotesize\ttfamily \label{class_t_l_b_a27fcea8e972cf8f385f57d015170f1e9} 
+void TLB::\+perfomance\+\_\+metrics (\begin{DoxyParamCaption}\item[{unsigned long long}]{ram\+\_\+latency}{, }\item[{unsigned long long}]{total\+\_\+ram\+\_\+reads}{, }\item[{unsigned long long}]{total\+\_\+ram\+\_\+writes}{, }\item[{unsigned long long}]{dirty\+\_\+evictions}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8cpp_source_l00140}{140}} of file \doxymbox{\hyperlink{_t_l_b__table_8cpp_source}{TLB\+\_\+table.\+cpp}}.
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_l_b_a27fcea8e972cf8f385f57d015170f1e9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_l_b_a3ced53e273a93ffc4c8c800e2ae2177a}\index{TLB@{TLB}!TLB\_Eviction@{TLB\_Eviction}}
+\index{TLB\_Eviction@{TLB\_Eviction}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{TLB\_Eviction()}{TLB\_Eviction()}}
+{\footnotesize\ttfamily \label{class_t_l_b_a3ced53e273a93ffc4c8c800e2ae2177a} 
+void TLB::\+\+TLB\+\_\+\+Eviction (\begin{DoxyParamCaption}\item[{unsigned long long}]{vpn}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8cpp_source_l00174}{174}} of file \doxymbox{\hyperlink{_t_l_b__table_8cpp_source}{TLB\+\_\+table.\+cpp}}.
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{class_t_l_b_a3ced53e273a93ffc4c8c800e2ae2177a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_t_l_b_a3ced53e273a93ffc4c8c800e2ae2177a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_t_l_b_a714df63003cc57627c84fa47135b574d}\index{TLB@{TLB}!View\_table@{View\_table}}
+\index{View\_table@{View\_table}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{View\_table()}{View\_table()}}
+{\footnotesize\ttfamily \label{class_t_l_b_a714df63003cc57627c84fa47135b574d} 
+void TLB::\+\+View\+\_\+table (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8cpp_source_l00019}{19}} of file \doxymbox{\hyperlink{_t_l_b__table_8cpp_source}{TLB\+\_\+table.\+cpp}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_t_l_b_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_t_l_b_ac96a8d0979bb45e394bef3290666322b}\index{TLB@{TLB}!cap@{cap}}
+\index{cap@{cap}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{cap}{cap}}
+{\footnotesize\ttfamily \label{class_t_l_b_ac96a8d0979bb45e394bef3290666322b} 
+unsigned long long TLB::\+cap\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8h_source_l00023}{23}} of file \doxymbox{\hyperlink{_t_l_b__table_8h_source}{TLB\+\_\+table.\+h}}.
+
+\Hypertarget{class_t_l_b_a8ee883b5952e95ba065c8cea98ccd132}\index{TLB@{TLB}!count@{count}}
+\index{count@{count}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily \label{class_t_l_b_a8ee883b5952e95ba065c8cea98ccd132} 
+int TLB::\+count}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8h_source_l00034}{34}} of file \doxymbox{\hyperlink{_t_l_b__table_8h_source}{TLB\+\_\+table.\+h}}.
+
+\Hypertarget{class_t_l_b_a7663b2b317dec794317b1e5c0a71130b}\index{TLB@{TLB}!index\_for\_FIFO@{index\_for\_FIFO}}
+\index{index\_for\_FIFO@{index\_for\_FIFO}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{index\_for\_FIFO}{index\_for\_FIFO}}
+{\footnotesize\ttfamily \label{class_t_l_b_a7663b2b317dec794317b1e5c0a71130b} 
+list$<$unsigned long long$>$ TLB::\+index\+\_\+for\+\_\+\+FIFO\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8h_source_l00025}{25}} of file \doxymbox{\hyperlink{_t_l_b__table_8h_source}{TLB\+\_\+table.\+h}}.
+
+\Hypertarget{class_t_l_b_a5d7acd8a3d839c47e95d4bb44c848be3}\index{TLB@{TLB}!lastEvictedSlot@{lastEvictedSlot}}
+\index{lastEvictedSlot@{lastEvictedSlot}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{lastEvictedSlot}{lastEvictedSlot}}
+{\footnotesize\ttfamily \label{class_t_l_b_a5d7acd8a3d839c47e95d4bb44c848be3} 
+int TLB::\+last\+Evicted\+Slot = -\/1}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8h_source_l00035}{35}} of file \doxymbox{\hyperlink{_t_l_b__table_8h_source}{TLB\+\_\+table.\+h}}.
+
+\Hypertarget{class_t_l_b_a95482da243f7659e2cf7c6887dda8c6d}\index{TLB@{TLB}!LRU\_map@{LRU\_map}}
+\index{LRU\_map@{LRU\_map}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{LRU\_map}{LRU\_map}}
+{\footnotesize\ttfamily \label{class_t_l_b_a95482da243f7659e2cf7c6887dda8c6d} 
+unordered\+\_\+map$<$unsigned long long, typename list$<$unsigned long long$>$::\+iterator$>$ TLB::\+\+LRU\+\_\+map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8h_source_l00026}{26}} of file \doxymbox{\hyperlink{_t_l_b__table_8h_source}{TLB\+\_\+table.\+h}}.
+
+\Hypertarget{class_t_l_b_a128d7629f15da21298a3f4668fd0d882}\index{TLB@{TLB}!LRU\_queue@{LRU\_queue}}
+\index{LRU\_queue@{LRU\_queue}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{LRU\_queue}{LRU\_queue}}
+{\footnotesize\ttfamily \label{class_t_l_b_a128d7629f15da21298a3f4668fd0d882} 
+list$<$unsigned long long$>$ TLB::\+\+LRU\+\_\+queue\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8h_source_l00027}{27}} of file \doxymbox{\hyperlink{_t_l_b__table_8h_source}{TLB\+\_\+table.\+h}}.
+
+\Hypertarget{class_t_l_b_a8aa2d6e4fe33dc8484dcb24216224214}\index{TLB@{TLB}!request@{request}}
+\index{request@{request}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{request}{request}}
+{\footnotesize\ttfamily \label{class_t_l_b_a8aa2d6e4fe33dc8484dcb24216224214} 
+int TLB::\+request}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8h_source_l00031}{31}} of file \doxymbox{\hyperlink{_t_l_b__table_8h_source}{TLB\+\_\+table.\+h}}.
+
+\Hypertarget{class_t_l_b_ac17ab78c2408aa81ece8bbf25a02d1c7}\index{TLB@{TLB}!table@{table}}
+\index{table@{table}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{table}{table}}
+{\footnotesize\ttfamily \label{class_t_l_b_ac17ab78c2408aa81ece8bbf25a02d1c7} 
+unordered\+\_\+map$<$unsigned long long, \doxymbox{\hyperlink{struct_value}{Value}}$>$ TLB::\+table\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8h_source_l00024}{24}} of file \doxymbox{\hyperlink{_t_l_b__table_8h_source}{TLB\+\_\+table.\+h}}.
+
+\Hypertarget{class_t_l_b_a576eb7b8c03b9a75dfeaf39284746b5e}\index{TLB@{TLB}!tlb\_hits@{tlb\_hits}}
+\index{tlb\_hits@{tlb\_hits}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{tlb\_hits}{tlb\_hits}}
+{\footnotesize\ttfamily \label{class_t_l_b_a576eb7b8c03b9a75dfeaf39284746b5e} 
+int TLB::\+tlb\+\_\+hits}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8h_source_l00032}{32}} of file \doxymbox{\hyperlink{_t_l_b__table_8h_source}{TLB\+\_\+table.\+h}}.
+
+\Hypertarget{class_t_l_b_af311501088c323f27e6917bcb9937d11}\index{TLB@{TLB}!tlb\_misses@{tlb\_misses}}
+\index{tlb\_misses@{tlb\_misses}!TLB@{TLB}}
+\doxysubsubsection{\texorpdfstring{tlb\_misses}{tlb\_misses}}
+{\footnotesize\ttfamily \label{class_t_l_b_af311501088c323f27e6917bcb9937d11} 
+int TLB::\+tlb\+\_\+misses}
+
+
+
+Definition at line \doxymbox{\hyperlink{_t_l_b__table_8h_source_l00033}{33}} of file \doxymbox{\hyperlink{_t_l_b__table_8h_source}{TLB\+\_\+table.\+h}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_t_l_b__table_8h}{TLB\+\_\+table.\+h}}\item 
+\doxymbox{\hyperlink{_t_l_b__table_8cpp}{TLB\+\_\+table.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,417 @@
+\doxysection{Page\+\_\+table Class Reference}
+\hypertarget{class_page__table}{}\label{class_page__table}\index{Page\_table@{Page\_table}}
+
+
+{\ttfamily \+\#include $<$Page\+\_\+frame.\+h$>$}
+
+
+
+Collaboration diagram for Page\+\_\+table:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_page__table__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_page__table_af9db69100651bb25db1ad9166f4f2808}{Page\+\_\+table}} (\doxymbox{\hyperlink{struct_file_configuration}{File\+Configuration}} \&config)
+\item 
+unsigned long long \doxymbox{\hyperlink{class_page__table_ab9f12f167e76d5c77ad8a6e0be644f00}{get\+Physical\+Address}} (unsigned long long vpn, unsigned long long offset, bool for\+\_\+writing, \doxymbox{\hyperlink{class_t_l_b}{TLB}} \&l1, bool hit, char w=\textquotesingle{}W\textquotesingle{})
+\item 
+int \doxymbox{\hyperlink{class_page__table_a42f91c3c8b6cbca5b826c21972ab476d}{get\+Frame\+\_\+count}} ()
+\item 
+void \doxymbox{\hyperlink{class_page__table_a4e7fb71c8d7533b33e603865c4bb2739}{display}} ()
+\item 
+void \doxymbox{\hyperlink{class_page__table_a77a13706e002f94738fa59ccb0699529}{display\+Ram}} ()
+\item 
+void \doxymbox{\hyperlink{class_page__table_ac017fffbdc89591ba0e8035f0a81d073}{LOOKAHEADINSERTION}} (\doxymbox{\hyperlink{struct_file_configuration}{File\+Configuration}} \&config)
+\item 
+bool \doxymbox{\hyperlink{class_page__table_a9d2bffd13650f18ec942425186124831}{is\+Frame\+Dirty}} (int frame\+Index)
+\item 
+unsigned long long \doxymbox{\hyperlink{class_page__table_aea351ddbecf530503ba323d7b77d601c}{OPT\+\_\+algorthim\+\_\+for\+\_\+getting\+\_\+pshycal\+\_\+number}} (unsigned long long vpn, unsigned long long offset, bool for\+\_\+writing, \doxymbox{\hyperlink{class_t_l_b}{TLB}} \&l1, vector$<$ unsigned long long $>$ \&raw\+\_\+adresses, size\+\_\+t index, char w=\textquotesingle{}W\textquotesingle{})
+\item 
+unsigned long long \doxymbox{\hyperlink{class_page__table_a43810c3581d9b9d764f0f4d8be6172f5}{access\+Page\+Table\+Directly}} (unsigned long long vpn, unsigned long long offset, bool for\+\_\+writing, char w)
+\item 
+unsigned long long \doxymbox{\hyperlink{class_page__table_a04ea045a1c4046deeebc6ba7e3368c45}{acccess\+\_\+using\+\_\+\+FIFO}} (unsigned long long vpn, unsigned long long offset, bool for\+\_\+writing, \doxymbox{\hyperlink{class_t_l_b}{TLB}} \&l1, char w=\textquotesingle{}W\textquotesingle{})
+\item 
+\doxymbox{\hyperlink{class_page__table_a6a34494b7776f9f2a62b76d860aba7ac}{\texorpdfstring{$\sim$}{\string~}\+Page\+\_\+table}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_page__table_a985c1e5d5e17b0b4147404b46c697f4c}{frame\+\_\+count}}
+\item 
+int \doxymbox{\hyperlink{class_page__table_a268fff938ab4a924f656d8b56248deb3}{max\+\_\+frames}}
+\item 
+int \doxymbox{\hyperlink{class_page__table_ae3aad7642dc8762e34c8c139137035e4}{last\+Evicted\+Frame}} = -\/1
+\item 
+unsigned long long \doxymbox{\hyperlink{class_page__table_a74301c0af836bad46bbf7616cfa10a61}{dirty\+\_\+evictions}}
+\item 
+unsigned long long \doxymbox{\hyperlink{class_page__table_af3ef0655beefd5f18ee4381df5a3f6a0}{ram\+\_\+read\+\_\+count}}
+\item 
+unsigned long long \doxymbox{\hyperlink{class_page__table_af1ec0321cc2080094a3aea48b41ea5e6}{ram\+\_\+write\+\_\+count}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unordered\+\_\+map$<$ unsigned long long, \doxymbox{\hyperlink{struct_page__frame__node}{Page\+\_\+frame\+\_\+node}} $>$ \doxymbox{\hyperlink{class_page__table_a0a22e6f212adeb8c28ae2218ec4cc33a}{table}}
+\item 
+list$<$ unsigned long long $>$ \doxymbox{\hyperlink{class_page__table_ad01f29f0628438ceaa666d541017627a}{FIFO\+\_\+queue}}
+\item 
+list$<$ unsigned long long $>$ \doxymbox{\hyperlink{class_page__table_adb9961c918308c62f78b307eddf73846}{LRU\+\_\+queue}}
+\item 
+unordered\+\_\+map$<$ unsigned long long, list$<$ unsigned long long $>$::\+iterator $>$ \doxymbox{\hyperlink{class_page__table_a167ccf5da0a6da19be9aa943383000e2}{LRU\+\_\+map}}
+\item 
+\doxymbox{\hyperlink{struct_ram__memory}{Ram\+\_\+memory}} \doxymbox{\hyperlink{class_page__table_a239ef81908a9f957b82770b2ed1b98d9}{mind\+\_\+palace}}
+\item 
+vector$<$ unsigned long long $>$ \doxymbox{\hyperlink{class_page__table_a9a24fbdcee981170d9351180895e7e9c}{lookahead\+\_\+buffer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8h_source_l00013}{13}} of file \doxymbox{\hyperlink{_page__frame_8h_source}{Page\+\_\+frame.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_page__table_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_page__table_af9db69100651bb25db1ad9166f4f2808}\index{Page\_table@{Page\_table}!Page\_table@{Page\_table}}
+\index{Page\_table@{Page\_table}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{Page\_table()}{Page\_table()}}
+{\footnotesize\ttfamily \label{class_page__table_af9db69100651bb25db1ad9166f4f2808} 
+Page\+\_\+table::\+\+Page\+\_\+table (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_file_configuration}{File\+Configuration}} \&}]{config}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8cpp_source_l00004}{4}} of file \doxymbox{\hyperlink{_page__frame_8cpp_source}{Page\+\_\+frame.\+cpp}}.
+
+\Hypertarget{class_page__table_a6a34494b7776f9f2a62b76d860aba7ac}\index{Page\_table@{Page\_table}!````~Page\_table@{\texorpdfstring{$\sim$}{\string~}Page\_table}}
+\index{````~Page\_table@{\texorpdfstring{$\sim$}{\string~}Page\_table}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Page\_table()}{\string~Page\_table()}}
+{\footnotesize\ttfamily \label{class_page__table_a6a34494b7776f9f2a62b76d860aba7ac} 
+Page\+\_\+table::\+\texorpdfstring{$\sim$}{\string~}\+Page\+\_\+table (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8cpp_source_l00259}{259}} of file \doxymbox{\hyperlink{_page__frame_8cpp_source}{Page\+\_\+frame.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_page__table_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_page__table_a04ea045a1c4046deeebc6ba7e3368c45}\index{Page\_table@{Page\_table}!acccess\_using\_FIFO@{acccess\_using\_FIFO}}
+\index{acccess\_using\_FIFO@{acccess\_using\_FIFO}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{acccess\_using\_FIFO()}{acccess\_using\_FIFO()}}
+{\footnotesize\ttfamily \label{class_page__table_a04ea045a1c4046deeebc6ba7e3368c45} 
+unsigned long long Page\+\_\+table::\+acccess\+\_\+using\+\_\+\+FIFO (\begin{DoxyParamCaption}\item[{unsigned long long}]{vpn}{, }\item[{unsigned long long}]{offset}{, }\item[{bool}]{for\+\_\+writing}{, }\item[{\doxymbox{\hyperlink{class_t_l_b}{TLB}} \&}]{l1}{, }\item[{char}]{w}{ = {\ttfamily \textquotesingle{}W\textquotesingle{}}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8cpp_source_l00279}{279}} of file \doxymbox{\hyperlink{_page__frame_8cpp_source}{Page\+\_\+frame.\+cpp}}.
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_page__table_a04ea045a1c4046deeebc6ba7e3368c45_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_page__table_a04ea045a1c4046deeebc6ba7e3368c45_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_page__table_a43810c3581d9b9d764f0f4d8be6172f5}\index{Page\_table@{Page\_table}!accessPageTableDirectly@{accessPageTableDirectly}}
+\index{accessPageTableDirectly@{accessPageTableDirectly}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{accessPageTableDirectly()}{accessPageTableDirectly()}}
+{\footnotesize\ttfamily \label{class_page__table_a43810c3581d9b9d764f0f4d8be6172f5} 
+unsigned long long Page\+\_\+table::\+access\+Page\+Table\+Directly (\begin{DoxyParamCaption}\item[{unsigned long long}]{vpn}{, }\item[{unsigned long long}]{offset}{, }\item[{bool}]{for\+\_\+writing}{, }\item[{char}]{w}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8cpp_source_l00239}{239}} of file \doxymbox{\hyperlink{_page__frame_8cpp_source}{Page\+\_\+frame.\+cpp}}.
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_page__table_a43810c3581d9b9d764f0f4d8be6172f5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_page__table_a4e7fb71c8d7533b33e603865c4bb2739}\index{Page\_table@{Page\_table}!display@{display}}
+\index{display@{display}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily \label{class_page__table_a4e7fb71c8d7533b33e603865c4bb2739} 
+void Page\+\_\+table::\+display (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8cpp_source_l00118}{118}} of file \doxymbox{\hyperlink{_page__frame_8cpp_source}{Page\+\_\+frame.\+cpp}}.
+
+\Hypertarget{class_page__table_a77a13706e002f94738fa59ccb0699529}\index{Page\_table@{Page\_table}!displayRam@{displayRam}}
+\index{displayRam@{displayRam}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{displayRam()}{displayRam()}}
+{\footnotesize\ttfamily \label{class_page__table_a77a13706e002f94738fa59ccb0699529} 
+void Page\+\_\+table::\+display\+Ram (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8cpp_source_l00125}{125}} of file \doxymbox{\hyperlink{_page__frame_8cpp_source}{Page\+\_\+frame.\+cpp}}.
+
+\Hypertarget{class_page__table_a42f91c3c8b6cbca5b826c21972ab476d}\index{Page\_table@{Page\_table}!getFrame\_count@{getFrame\_count}}
+\index{getFrame\_count@{getFrame\_count}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{getFrame\_count()}{getFrame\_count()}}
+{\footnotesize\ttfamily \label{class_page__table_a42f91c3c8b6cbca5b826c21972ab476d} 
+int Page\+\_\+table::\+get\+Frame\+\_\+count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8cpp_source_l00113}{113}} of file \doxymbox{\hyperlink{_page__frame_8cpp_source}{Page\+\_\+frame.\+cpp}}.
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_page__table_a42f91c3c8b6cbca5b826c21972ab476d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_page__table_ab9f12f167e76d5c77ad8a6e0be644f00}\index{Page\_table@{Page\_table}!getPhysicalAddress@{getPhysicalAddress}}
+\index{getPhysicalAddress@{getPhysicalAddress}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{getPhysicalAddress()}{getPhysicalAddress()}}
+{\footnotesize\ttfamily \label{class_page__table_ab9f12f167e76d5c77ad8a6e0be644f00} 
+unsigned long long Page\+\_\+table::\+get\+Physical\+Address (\begin{DoxyParamCaption}\item[{unsigned long long}]{vpn}{, }\item[{unsigned long long}]{offset}{, }\item[{bool}]{for\+\_\+writing}{, }\item[{\doxymbox{\hyperlink{class_t_l_b}{TLB}} \&}]{l1}{, }\item[{bool}]{hit}{, }\item[{char}]{w}{ = {\ttfamily \textquotesingle{}W\textquotesingle{}}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8cpp_source_l00011}{11}} of file \doxymbox{\hyperlink{_page__frame_8cpp_source}{Page\+\_\+frame.\+cpp}}.
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_page__table_ab9f12f167e76d5c77ad8a6e0be644f00_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_page__table_ab9f12f167e76d5c77ad8a6e0be644f00_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_page__table_a9d2bffd13650f18ec942425186124831}\index{Page\_table@{Page\_table}!isFrameDirty@{isFrameDirty}}
+\index{isFrameDirty@{isFrameDirty}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{isFrameDirty()}{isFrameDirty()}}
+{\footnotesize\ttfamily \label{class_page__table_a9d2bffd13650f18ec942425186124831} 
+bool Page\+\_\+table::\+is\+Frame\+Dirty (\begin{DoxyParamCaption}\item[{int}]{frame\+Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8h_source_l00039}{39}} of file \doxymbox{\hyperlink{_page__frame_8h_source}{Page\+\_\+frame.\+h}}.
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_page__table_a9d2bffd13650f18ec942425186124831_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_page__table_ac017fffbdc89591ba0e8035f0a81d073}\index{Page\_table@{Page\_table}!LOOKAHEADINSERTION@{LOOKAHEADINSERTION}}
+\index{LOOKAHEADINSERTION@{LOOKAHEADINSERTION}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{LOOKAHEADINSERTION()}{LOOKAHEADINSERTION()}}
+{\footnotesize\ttfamily \label{class_page__table_ac017fffbdc89591ba0e8035f0a81d073} 
+void Page\+\_\+table::\+\+LOOKAHEADINSERTION (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_file_configuration}{File\+Configuration}} \&}]{config}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8cpp_source_l00231}{231}} of file \doxymbox{\hyperlink{_page__frame_8cpp_source}{Page\+\_\+frame.\+cpp}}.
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_page__table_ac017fffbdc89591ba0e8035f0a81d073_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_page__table_ac017fffbdc89591ba0e8035f0a81d073_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_page__table_aea351ddbecf530503ba323d7b77d601c}\index{Page\_table@{Page\_table}!OPT\_algorthim\_for\_getting\_pshycal\_number@{OPT\_algorthim\_for\_getting\_pshycal\_number}}
+\index{OPT\_algorthim\_for\_getting\_pshycal\_number@{OPT\_algorthim\_for\_getting\_pshycal\_number}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{OPT\_algorthim\_for\_getting\_pshycal\_number()}{OPT\_algorthim\_for\_getting\_pshycal\_number()}}
+{\footnotesize\ttfamily \label{class_page__table_aea351ddbecf530503ba323d7b77d601c} 
+unsigned long long Page\+\_\+table::\+\+OPT\+\_\+algorthim\+\_\+for\+\_\+getting\+\_\+pshycal\+\_\+number (\begin{DoxyParamCaption}\item[{unsigned long long}]{vpn}{, }\item[{unsigned long long}]{offset}{, }\item[{bool}]{for\+\_\+writing}{, }\item[{\doxymbox{\hyperlink{class_t_l_b}{TLB}} \&}]{l1}{, }\item[{vector$<$ unsigned long long $>$ \&}]{raw\+\_\+adresses}{, }\item[{size\+\_\+t}]{index}{, }\item[{char}]{w}{ = {\ttfamily \textquotesingle{}W\textquotesingle{}}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8cpp_source_l00130}{130}} of file \doxymbox{\hyperlink{_page__frame_8cpp_source}{Page\+\_\+frame.\+cpp}}.
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_page__table_aea351ddbecf530503ba323d7b77d601c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_page__table_aea351ddbecf530503ba323d7b77d601c_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_page__table_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_page__table_a74301c0af836bad46bbf7616cfa10a61}\index{Page\_table@{Page\_table}!dirty\_evictions@{dirty\_evictions}}
+\index{dirty\_evictions@{dirty\_evictions}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{dirty\_evictions}{dirty\_evictions}}
+{\footnotesize\ttfamily \label{class_page__table_a74301c0af836bad46bbf7616cfa10a61} 
+unsigned long long Page\+\_\+table::\+dirty\+\_\+evictions}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8h_source_l00027}{27}} of file \doxymbox{\hyperlink{_page__frame_8h_source}{Page\+\_\+frame.\+h}}.
+
+\Hypertarget{class_page__table_ad01f29f0628438ceaa666d541017627a}\index{Page\_table@{Page\_table}!FIFO\_queue@{FIFO\_queue}}
+\index{FIFO\_queue@{FIFO\_queue}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{FIFO\_queue}{FIFO\_queue}}
+{\footnotesize\ttfamily \label{class_page__table_ad01f29f0628438ceaa666d541017627a} 
+list$<$unsigned long long $>$ Page\+\_\+table::\+\+FIFO\+\_\+queue\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8h_source_l00016}{16}} of file \doxymbox{\hyperlink{_page__frame_8h_source}{Page\+\_\+frame.\+h}}.
+
+\Hypertarget{class_page__table_a985c1e5d5e17b0b4147404b46c697f4c}\index{Page\_table@{Page\_table}!frame\_count@{frame\_count}}
+\index{frame\_count@{frame\_count}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{frame\_count}{frame\_count}}
+{\footnotesize\ttfamily \label{class_page__table_a985c1e5d5e17b0b4147404b46c697f4c} 
+int Page\+\_\+table::\+frame\+\_\+count}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8h_source_l00024}{24}} of file \doxymbox{\hyperlink{_page__frame_8h_source}{Page\+\_\+frame.\+h}}.
+
+\Hypertarget{class_page__table_ae3aad7642dc8762e34c8c139137035e4}\index{Page\_table@{Page\_table}!lastEvictedFrame@{lastEvictedFrame}}
+\index{lastEvictedFrame@{lastEvictedFrame}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{lastEvictedFrame}{lastEvictedFrame}}
+{\footnotesize\ttfamily \label{class_page__table_ae3aad7642dc8762e34c8c139137035e4} 
+int Page\+\_\+table::\+last\+Evicted\+Frame = -\/1}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8h_source_l00026}{26}} of file \doxymbox{\hyperlink{_page__frame_8h_source}{Page\+\_\+frame.\+h}}.
+
+\Hypertarget{class_page__table_a9a24fbdcee981170d9351180895e7e9c}\index{Page\_table@{Page\_table}!lookahead\_buffer@{lookahead\_buffer}}
+\index{lookahead\_buffer@{lookahead\_buffer}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{lookahead\_buffer}{lookahead\_buffer}}
+{\footnotesize\ttfamily \label{class_page__table_a9a24fbdcee981170d9351180895e7e9c} 
+vector$<$unsigned long long$>$ Page\+\_\+table::\+lookahead\+\_\+buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8h_source_l00021}{21}} of file \doxymbox{\hyperlink{_page__frame_8h_source}{Page\+\_\+frame.\+h}}.
+
+\Hypertarget{class_page__table_a167ccf5da0a6da19be9aa943383000e2}\index{Page\_table@{Page\_table}!LRU\_map@{LRU\_map}}
+\index{LRU\_map@{LRU\_map}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{LRU\_map}{LRU\_map}}
+{\footnotesize\ttfamily \label{class_page__table_a167ccf5da0a6da19be9aa943383000e2} 
+unordered\+\_\+map$<$unsigned long long, list$<$unsigned long long$>$::\+iterator$>$ Page\+\_\+table::\+\+LRU\+\_\+map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8h_source_l00019}{19}} of file \doxymbox{\hyperlink{_page__frame_8h_source}{Page\+\_\+frame.\+h}}.
+
+\Hypertarget{class_page__table_adb9961c918308c62f78b307eddf73846}\index{Page\_table@{Page\_table}!LRU\_queue@{LRU\_queue}}
+\index{LRU\_queue@{LRU\_queue}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{LRU\_queue}{LRU\_queue}}
+{\footnotesize\ttfamily \label{class_page__table_adb9961c918308c62f78b307eddf73846} 
+list$<$unsigned long long$>$ Page\+\_\+table::\+\+LRU\+\_\+queue\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8h_source_l00018}{18}} of file \doxymbox{\hyperlink{_page__frame_8h_source}{Page\+\_\+frame.\+h}}.
+
+\Hypertarget{class_page__table_a268fff938ab4a924f656d8b56248deb3}\index{Page\_table@{Page\_table}!max\_frames@{max\_frames}}
+\index{max\_frames@{max\_frames}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{max\_frames}{max\_frames}}
+{\footnotesize\ttfamily \label{class_page__table_a268fff938ab4a924f656d8b56248deb3} 
+int Page\+\_\+table::\+max\+\_\+frames}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8h_source_l00025}{25}} of file \doxymbox{\hyperlink{_page__frame_8h_source}{Page\+\_\+frame.\+h}}.
+
+\Hypertarget{class_page__table_a239ef81908a9f957b82770b2ed1b98d9}\index{Page\_table@{Page\_table}!mind\_palace@{mind\_palace}}
+\index{mind\_palace@{mind\_palace}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{mind\_palace}{mind\_palace}}
+{\footnotesize\ttfamily \label{class_page__table_a239ef81908a9f957b82770b2ed1b98d9} 
+\doxymbox{\hyperlink{struct_ram__memory}{Ram\+\_\+memory}} Page\+\_\+table::\+mind\+\_\+palace\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8h_source_l00020}{20}} of file \doxymbox{\hyperlink{_page__frame_8h_source}{Page\+\_\+frame.\+h}}.
+
+\Hypertarget{class_page__table_af3ef0655beefd5f18ee4381df5a3f6a0}\index{Page\_table@{Page\_table}!ram\_read\_count@{ram\_read\_count}}
+\index{ram\_read\_count@{ram\_read\_count}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{ram\_read\_count}{ram\_read\_count}}
+{\footnotesize\ttfamily \label{class_page__table_af3ef0655beefd5f18ee4381df5a3f6a0} 
+unsigned long long Page\+\_\+table::\+ram\+\_\+read\+\_\+count}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8h_source_l00028}{28}} of file \doxymbox{\hyperlink{_page__frame_8h_source}{Page\+\_\+frame.\+h}}.
+
+\Hypertarget{class_page__table_af1ec0321cc2080094a3aea48b41ea5e6}\index{Page\_table@{Page\_table}!ram\_write\_count@{ram\_write\_count}}
+\index{ram\_write\_count@{ram\_write\_count}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{ram\_write\_count}{ram\_write\_count}}
+{\footnotesize\ttfamily \label{class_page__table_af1ec0321cc2080094a3aea48b41ea5e6} 
+unsigned long long Page\+\_\+table::\+ram\+\_\+write\+\_\+count}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8h_source_l00029}{29}} of file \doxymbox{\hyperlink{_page__frame_8h_source}{Page\+\_\+frame.\+h}}.
+
+\Hypertarget{class_page__table_a0a22e6f212adeb8c28ae2218ec4cc33a}\index{Page\_table@{Page\_table}!table@{table}}
+\index{table@{table}!Page\_table@{Page\_table}}
+\doxysubsubsection{\texorpdfstring{table}{table}}
+{\footnotesize\ttfamily \label{class_page__table_a0a22e6f212adeb8c28ae2218ec4cc33a} 
+unordered\+\_\+map$<$unsigned long long, \doxymbox{\hyperlink{struct_page__frame__node}{Page\+\_\+frame\+\_\+node}}$>$ Page\+\_\+table::\+table\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{_page__frame_8h_source_l00015}{15}} of file \doxymbox{\hyperlink{_page__frame_8h_source}{Page\+\_\+frame.\+h}}.
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{_page__frame_8h}{Page\+\_\+frame.\+h}}\item 
+\doxymbox{\hyperlink{_page__frame_8cpp}{Page\+\_\+frame.\+cpp}}\end{DoxyCompactItemize}

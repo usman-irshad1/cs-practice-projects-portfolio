@@ -1,0 +1,145 @@
+\doxysection{Memory\+Visualizer Class Reference}
+\hypertarget{class_memory_visualizer}{}\label{class_memory_visualizer}\index{MemoryVisualizer@{MemoryVisualizer}}
+
+
+{\ttfamily \+\#include $<$mem\+\_\+visualization.\+h$>$}
+
+
+
+Collaboration diagram for Memory\+Visualizer:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{class_memory_visualizer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_memory_visualizer_af169aed797efc64531cc47105569b293}{Memory\+Visualizer}} (int width=1200, int height=800)
+\item 
+\doxymbox{\hyperlink{class_memory_visualizer_aa07ed3b2d6c0a517aef767cc8b96fa81}{\texorpdfstring{$\sim$}{\string~}\+Memory\+Visualizer}} ()
+\item 
+bool \doxymbox{\hyperlink{class_memory_visualizer_a2b1961c4bbb1154fb219c80fd8979d09}{Is\+Running}} ()
+\item 
+void \doxymbox{\hyperlink{class_memory_visualizer_a9646d46ef27bb9d6db74692c0e9d233d}{Render}} (\doxymbox{\hyperlink{class_t_l_b}{TLB}} \&tlb, \doxymbox{\hyperlink{class_page__table}{Page\+\_\+table}} \&pt, bool last\+Access\+Was\+Hit, \doxymbox{\hyperlink{struct_file_configuration}{File\+Configuration}} \&config, int last\+Accessed\+Index, std::\+string algo\+Name)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_memory_visualizer_af1824ddb185f2542ebbea7dfac9dd51e}{screen\+Width}}
+\item 
+int \doxymbox{\hyperlink{class_memory_visualizer_a5ea1cc31083e092cdce580ec9eeee985}{screen\+Height}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \doxymbox{\hyperlink{mem__visualization_8h_source_l00010}{10}} of file \doxymbox{\hyperlink{mem__visualization_8h_source}{mem\+\_\+visualization.\+h}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{class_memory_visualizer_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_memory_visualizer_af169aed797efc64531cc47105569b293}\index{MemoryVisualizer@{MemoryVisualizer}!MemoryVisualizer@{MemoryVisualizer}}
+\index{MemoryVisualizer@{MemoryVisualizer}!MemoryVisualizer@{MemoryVisualizer}}
+\doxysubsubsection{\texorpdfstring{MemoryVisualizer()}{MemoryVisualizer()}}
+{\footnotesize\ttfamily \label{class_memory_visualizer_af169aed797efc64531cc47105569b293} 
+Memory\+Visualizer::\+\+Memory\+Visualizer (\begin{DoxyParamCaption}\item[{int}]{width}{ = {\ttfamily 1200}, }\item[{int}]{height}{ = {\ttfamily 800}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{mem__visualization_8h_source_l00016}{16}} of file \doxymbox{\hyperlink{mem__visualization_8h_source}{mem\+\_\+visualization.\+h}}.
+
+\Hypertarget{class_memory_visualizer_aa07ed3b2d6c0a517aef767cc8b96fa81}\index{MemoryVisualizer@{MemoryVisualizer}!````~MemoryVisualizer@{\texorpdfstring{$\sim$}{\string~}MemoryVisualizer}}
+\index{````~MemoryVisualizer@{\texorpdfstring{$\sim$}{\string~}MemoryVisualizer}!MemoryVisualizer@{MemoryVisualizer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MemoryVisualizer()}{\string~MemoryVisualizer()}}
+{\footnotesize\ttfamily \label{class_memory_visualizer_aa07ed3b2d6c0a517aef767cc8b96fa81} 
+Memory\+Visualizer::\+\texorpdfstring{$\sim$}{\string~}\+Memory\+Visualizer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{mem__visualization_8h_source_l00022}{22}} of file \doxymbox{\hyperlink{mem__visualization_8h_source}{mem\+\_\+visualization.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_memory_visualizer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_memory_visualizer_a2b1961c4bbb1154fb219c80fd8979d09}\index{MemoryVisualizer@{MemoryVisualizer}!IsRunning@{IsRunning}}
+\index{IsRunning@{IsRunning}!MemoryVisualizer@{MemoryVisualizer}}
+\doxysubsubsection{\texorpdfstring{IsRunning()}{IsRunning()}}
+{\footnotesize\ttfamily \label{class_memory_visualizer_a2b1961c4bbb1154fb219c80fd8979d09} 
+bool Memory\+Visualizer::\+\+Is\+Running (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{mem__visualization_8h_source_l00024}{24}} of file \doxymbox{\hyperlink{mem__visualization_8h_source}{mem\+\_\+visualization.\+h}}.
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_memory_visualizer_a2b1961c4bbb1154fb219c80fd8979d09_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_memory_visualizer_a9646d46ef27bb9d6db74692c0e9d233d}\index{MemoryVisualizer@{MemoryVisualizer}!Render@{Render}}
+\index{Render@{Render}!MemoryVisualizer@{MemoryVisualizer}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily \label{class_memory_visualizer_a9646d46ef27bb9d6db74692c0e9d233d} 
+void Memory\+Visualizer::\+\+Render (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_t_l_b}{TLB}} \&}]{tlb}{, }\item[{\doxymbox{\hyperlink{class_page__table}{Page\+\_\+table}} \&}]{pt}{, }\item[{bool}]{last\+Access\+Was\+Hit}{, }\item[{\doxymbox{\hyperlink{struct_file_configuration}{File\+Configuration}} \&}]{config}{, }\item[{int}]{last\+Accessed\+Index}{, }\item[{std::\+string}]{algo\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{mem__visualization_8h_source_l00026}{26}} of file \doxymbox{\hyperlink{mem__visualization_8h_source}{mem\+\_\+visualization.\+h}}.
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_memory_visualizer_a9646d46ef27bb9d6db74692c0e9d233d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_memory_visualizer_a9646d46ef27bb9d6db74692c0e9d233d_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_memory_visualizer_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_memory_visualizer_a5ea1cc31083e092cdce580ec9eeee985}\index{MemoryVisualizer@{MemoryVisualizer}!screenHeight@{screenHeight}}
+\index{screenHeight@{screenHeight}!MemoryVisualizer@{MemoryVisualizer}}
+\doxysubsubsection{\texorpdfstring{screenHeight}{screenHeight}}
+{\footnotesize\ttfamily \label{class_memory_visualizer_a5ea1cc31083e092cdce580ec9eeee985} 
+int Memory\+Visualizer::\+screen\+Height\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{mem__visualization_8h_source_l00013}{13}} of file \doxymbox{\hyperlink{mem__visualization_8h_source}{mem\+\_\+visualization.\+h}}.
+
+\Hypertarget{class_memory_visualizer_af1824ddb185f2542ebbea7dfac9dd51e}\index{MemoryVisualizer@{MemoryVisualizer}!screenWidth@{screenWidth}}
+\index{screenWidth@{screenWidth}!MemoryVisualizer@{MemoryVisualizer}}
+\doxysubsubsection{\texorpdfstring{screenWidth}{screenWidth}}
+{\footnotesize\ttfamily \label{class_memory_visualizer_af1824ddb185f2542ebbea7dfac9dd51e} 
+int Memory\+Visualizer::\+screen\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \doxymbox{\hyperlink{mem__visualization_8h_source_l00012}{12}} of file \doxymbox{\hyperlink{mem__visualization_8h_source}{mem\+\_\+visualization.\+h}}.
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{mem__visualization_8h}{mem\+\_\+visualization.\+h}}\end{DoxyCompactItemize}

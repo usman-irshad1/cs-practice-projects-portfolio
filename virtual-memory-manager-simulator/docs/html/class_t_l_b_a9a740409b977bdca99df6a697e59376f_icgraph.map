@@ -1,0 +1,14 @@
+<map id="TLB::insert_with_LRU_algo" name="TLB::insert_with_LRU_algo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="320,101,501,128"/>
+<area shape="rect" id="Node000002" href="$struct_virtual___memory__manager.html#a61742b1bab01707169548f7af30fed3e" title=" " alt="" coords="103,5,272,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="358,96,243,51,244,46,363,94"/>
+<area shape="rect" id="Node000004" href="$class_drawer.html#aa61ad2b7dc21be9997b4e4d344339135" title=" " alt="" coords="127,72,248,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="302,101,248,96,248,91,307,100"/>
+<area shape="rect" id="Node000005" href="$struct_virtual___memory__manager.html#a84b76eb921b181cc80995f71d994e42c" title=" " alt="" coords="103,123,272,165"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="302,129,273,135,272,130,307,128"/>
+<area shape="rect" id="Node000006" href="$class_drawer.html#a945d75e083b5e3d1c367621559ed8380" title=" " alt="" coords="114,189,261,216"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="371,135,273,180,239,191,238,186,271,175,366,136"/>
+<area shape="rect" id="Node000003" href="$_o_s__project_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,72,55,99"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="113,56,57,79,54,74,116,52"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="112,118,55,97,55,92,117,115"/>
+</map>

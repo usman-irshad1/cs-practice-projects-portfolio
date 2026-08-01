@@ -1,0 +1,91 @@
+\doxysection{File\+Configuration.\+cpp}
+\hypertarget{_file_configuration_8cpp_source}{}\label{_file_configuration_8cpp_source}\doxymbox{\hyperlink{_file_configuration_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_file_configuration_8h}{FileConfiguration.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00005}\doxymbox{\hyperlink{struct_file_configuration_ab43acba8d9d17326b04118e9293b2663}{00005}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_file_configuration_ab43acba8d9d17326b04118e9293b2663}{FileConfiguration::\ No\_of\_bits\_to\_be\_shifted}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00006}00006\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ power\ =\ log2(\doxymbox{\hyperlink{struct_file_configuration_a11c64822271e5a06eae9f2fd8d4aae9e}{page\_size}});}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00007}00007\ \ \ \ \ \ \ \ \ power\ =\ ceil(power);}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ int(power);}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00009}00009\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00011}\doxymbox{\hyperlink{struct_file_configuration_a3506cceeda4e229e14590e0f6a40d35c}{00011}}\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{struct_file_configuration_a3506cceeda4e229e14590e0f6a40d35c}{FileConfiguration::getVirtual\_page\_number}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ address)\ \{}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (address\ <=\ \doxymbox{\hyperlink{struct_file_configuration_a3df614a958c014065db3a6a2456f6705}{virtual\_size}})\ \{}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ shifted\ =\ \doxymbox{\hyperlink{struct_file_configuration_ab43acba8d9d17326b04118e9293b2663}{No\_of\_bits\_to\_be\_shifted}}();}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ address\ =\ address\ >>\ shifted;}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ address;}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ }
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00018}00018\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00021}\doxymbox{\hyperlink{struct_file_configuration_a67365063c1cc7c04bc5bab73af14c817}{00021}}\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{struct_file_configuration_a67365063c1cc7c04bc5bab73af14c817}{FileConfiguration::offset}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ address)\ \{}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (address\ <=\ \doxymbox{\hyperlink{struct_file_configuration_a3df614a958c014065db3a6a2456f6705}{virtual\_size}})\ \{}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ address\ =\ address\ \&\ (\doxymbox{\hyperlink{struct_file_configuration_a11c64822271e5a06eae9f2fd8d4aae9e}{page\_size}}\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ address;}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00031}\doxymbox{\hyperlink{struct_file_configuration_a008e4c4d93312363acbf5174cee95ae2}{00031}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_file_configuration_a008e4c4d93312363acbf5174cee95ae2}{FileConfiguration::FileParser}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ ifstream\ file(\textcolor{stringliteral}{"{}Parameters.json"{}});}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (file.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ Json::Value\ root;}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ Json::CharReaderBuilder\ builder;}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ errors;}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Json::parseFromStream(builder,\ file,\ \&root,\ \&errors))\ \{}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_file_configuration_a058fa1b738c70e9f85d24b6aa4dc6565}{physical\_size}}\ =\ root[\textcolor{stringliteral}{"{}physical\_size"{}}].asUInt64();}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_file_configuration_a11c64822271e5a06eae9f2fd8d4aae9e}{page\_size}}\ =\ root[\textcolor{stringliteral}{"{}page\_size"{}}].asUInt64();}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_file_configuration_a1862a00f413202ce462a20ea11557c6c}{TLB\_size}}\ =\ root[\textcolor{stringliteral}{"{}TLB\_size"{}}].asUInt64();}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_file_configuration_a3df614a958c014065db3a6a2456f6705}{virtual\_size}}\ =\ root[\textcolor{stringliteral}{"{}virtual\_size"{}}].asUInt64();}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_file_configuration_a83793d02f6190b74a7353b9406aadec9}{latency}}\ =\ root[\textcolor{stringliteral}{"{}latency"{}}].asUInt64();}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ parse\ JSON:\ "{}}\ <<\ errors\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00054}\doxymbox{\hyperlink{struct_file_configuration_abe3f5e89da6b151be1c7be61daf7823e}{00054}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_file_configuration_abe3f5e89da6b151be1c7be61daf7823e}{FileConfiguration::\ Display}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Physical\ Size:\ "{}}\ <<\ \doxymbox{\hyperlink{struct_file_configuration_a058fa1b738c70e9f85d24b6aa4dc6565}{physical\_size}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Page\ Size:\ "{}}\ <<\ \doxymbox{\hyperlink{struct_file_configuration_a11c64822271e5a06eae9f2fd8d4aae9e}{page\_size}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}TLB\ Size:\ "{}}\ <<\ \doxymbox{\hyperlink{struct_file_configuration_a1862a00f413202ce462a20ea11557c6c}{TLB\_size}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Virtual\ Size:\ "{}}\ <<\ \doxymbox{\hyperlink{struct_file_configuration_a3df614a958c014065db3a6a2456f6705}{virtual\_size}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Latency:\ "{}}\ <<\ \doxymbox{\hyperlink{struct_file_configuration_a83793d02f6190b74a7353b9406aadec9}{latency}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00063}\doxymbox{\hyperlink{struct_file_configuration_ac321edb3b8eddc5cb52711678333a15f}{00063}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_file_configuration_ac321edb3b8eddc5cb52711678333a15f}{FileConfiguration::\ Reading\_Addresses}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ ifstream\ infile(\textcolor{stringliteral}{"{}addresses.txt"{}});}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ address;}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (infile.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (infile\ >>\ hex\ >>\ address)\ \{}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_file_configuration_a1bc18aeffd851a643b73313c9fee5e07}{actual\_adress}}.push\_back(address);}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}File\ cant\ be\ opened"{}};}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00074}00074\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00075}\doxymbox{\hyperlink{struct_file_configuration_a7feef28112cafbda4a054c3647bc65be}{00075}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_file_configuration_a7feef28112cafbda4a054c3647bc65be}{FileConfiguration::Writing}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ ofstream\ infile(\textcolor{stringliteral}{"{}addresses.txt"{}});}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ address;}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (infile.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ infile\ <<\ 02123443;}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}File\ cant\ be\ opened"{}};}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_file_configuration_8cpp_source_l00086}00086\ }
+
+\end{DoxyCode}

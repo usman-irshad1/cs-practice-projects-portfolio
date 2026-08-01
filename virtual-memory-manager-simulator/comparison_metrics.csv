@@ -1,0 +1,4 @@
+Algorithm,TotalRequests,TLBHits,TLBMisses,HitRate,RAMReads,RAMWrites,DirtyEvictions,EAT
+FIFO,175,0,175,0,130,35,15,108.143
+LRU,175,0,175,0,125,35,13,96.4286
+OPT,175,0,175,0,125,35,13,96.4286

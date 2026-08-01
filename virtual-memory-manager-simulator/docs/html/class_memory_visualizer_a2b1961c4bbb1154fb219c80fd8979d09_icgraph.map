@@ -1,0 +1,9 @@
+<map id="MemoryVisualizer::IsRunning" name="MemoryVisualizer::IsRunning">
+<area shape="rect" id="Node000001" title=" " alt="" coords="201,56,393,83"/>
+<area shape="rect" id="Node000002" href="$class_drawer.html#aa61ad2b7dc21be9997b4e4d344339135" title=" " alt="" coords="19,5,139,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="219,53,139,35,140,30,224,51"/>
+<area shape="rect" id="Node000003" href="$class_drawer.html#a945d75e083b5e3d1c367621559ed8380" title=" " alt="" coords="5,56,153,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="183,70,153,72,152,67,188,69"/>
+<area shape="rect" id="Node000004" href="$class_drawer.html#ab0f30f7d7dc2a2dba51d4584deda4155" title=" " alt="" coords="20,107,138,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="224,86,139,109,138,104,219,87"/>
+</map>

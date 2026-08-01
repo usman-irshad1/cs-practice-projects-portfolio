@@ -1,0 +1,164 @@
+\doxysection{Virtual\+\_\+\+Memory\+\_\+manager.\+cpp}
+\hypertarget{_virtual___memory__manager_8cpp_source}{}\label{_virtual___memory__manager_8cpp_source}\doxymbox{\hyperlink{_virtual___memory__manager_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_virtual___memory__manager_8h}{Virtual\_Memory\_manager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include"{}\doxymbox{\hyperlink{mem__visualization_8h}{mem\_visualization.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00009}\doxymbox{\hyperlink{struct_virtual___memory__manager_a61742b1bab01707169548f7af30fed3e}{00009}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_virtual___memory__manager_a61742b1bab01707169548f7af30fed3e}{Virtual\_Memory\_manager::\ \ Runner}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ ofstream\ clear\_disk(\textcolor{stringliteral}{"{}HardDisk.txt"{}},\ ios::trunc);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00011}00011\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_file_configuration}{FileConfiguration}}\ config;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ config.\doxymbox{\hyperlink{struct_file_configuration_a008e4c4d93312363acbf5174cee95ae2}{FileParser}}();}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ config.\doxymbox{\hyperlink{struct_file_configuration_abe3f5e89da6b151be1c7be61daf7823e}{Display}}();}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ frame\_address;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_t_l_b}{TLB}}\ cache(config);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_page__table}{Page\_table}}\ pages(config);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_memory_visualizer}{MemoryVisualizer}}\ gui(1200,\ 800);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ config.\doxymbox{\hyperlink{struct_file_configuration_ac321edb3b8eddc5cb52711678333a15f}{Reading\_Addresses}}();}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ instruction\_count\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ index\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ it\ =\ config.\doxymbox{\hyperlink{struct_file_configuration_a1bc18aeffd851a643b73313c9fee5e07}{actual\_adress}}.begin();\ it\ !=\ config.\doxymbox{\hyperlink{struct_file_configuration_a1bc18aeffd851a643b73313c9fee5e07}{actual\_adress}}.end();\ it++)\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ address\ =\ *it;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ vpn\ =\ config.\doxymbox{\hyperlink{struct_file_configuration_a3506cceeda4e229e14590e0f6a40d35c}{getVirtual\_page\_number}}(address);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ offset\ =\ config.\doxymbox{\hyperlink{struct_file_configuration_a67365063c1cc7c04bc5bab73af14c817}{offset}}(address);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_write\ =\ (instruction\_count\ \%\ 5\ ==\ 0);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ x;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (is\_write)\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ \textcolor{charliteral}{'W'};}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ \textcolor{charliteral}{'R'};}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ found\ =\ cache.\doxymbox{\hyperlink{class_t_l_b_ac184e51e58504f10d4a4662f10d0ac89}{find}}(vpn,\ frame\_address);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (found)\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pages.\doxymbox{\hyperlink{class_page__table_ab9f12f167e76d5c77ad8a6e0be644f00}{getPhysicalAddress}}(vpn,\ offset,\ is\_write,\ cache,found,\ x);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//cout\ <<\ "{}For\ the\ virtual\ address\ "{}\ <<\ vpn\ <<\ "{}\ the\ frame\ is\ "{}\ <<\ frame\_address\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!found)\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cache.\doxymbox{\hyperlink{class_t_l_b_a9a740409b977bdca99df6a697e59376f}{insert\_with\_LRU\_algo}}(vpn,\ pages.\doxymbox{\hyperlink{class_page__table_ab9f12f167e76d5c77ad8a6e0be644f00}{getPhysicalAddress}}(vpn,\ offset,\ is\_write,\ cache,\ x),\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//cache.View\_table();}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ index++;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ instruction\_count++;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}The\ frames\ used\ are\ "{}}\ <<\ pages.\doxymbox{\hyperlink{class_page__table_a42f91c3c8b6cbca5b826c21972ab476d}{getFrame\_count}}();}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ cache.\doxymbox{\hyperlink{class_t_l_b_a27fcea8e972cf8f385f57d015170f1e9}{perfomance\_metrics}}(config.\doxymbox{\hyperlink{struct_file_configuration_a83793d02f6190b74a7353b9406aadec9}{latency}},\ pages.\doxymbox{\hyperlink{class_page__table_af3ef0655beefd5f18ee4381df5a3f6a0}{ram\_read\_count}},\ pages.\doxymbox{\hyperlink{class_page__table_af1ec0321cc2080094a3aea48b41ea5e6}{ram\_write\_count}},\ pages.\doxymbox{\hyperlink{class_page__table_a74301c0af836bad46bbf7616cfa10a61}{dirty\_evictions}});}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00055}\doxymbox{\hyperlink{struct_virtual___memory__manager_a84b76eb921b181cc80995f71d994e42c}{00055}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_virtual___memory__manager_a84b76eb921b181cc80995f71d994e42c}{Virtual\_Memory\_manager::SPRINTER}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00057}00057\ \ \ \ \ ofstream\ clear\_disk(\textcolor{stringliteral}{"{}HardDisk.txt"{}},\ ios::trunc);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00058}00058\ \ \ \ \ ofstream\ clear\_disk2(\textcolor{stringliteral}{"{}OPT\_logging"{}},\ ios::trunc);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00059}00059\ \ \ \ \ \doxymbox{\hyperlink{struct_file_configuration}{FileConfiguration}}\ config;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00060}00060\ \ \ \ \ config.\doxymbox{\hyperlink{struct_file_configuration_a008e4c4d93312363acbf5174cee95ae2}{FileParser}}();}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00061}00061\ \ \ \ \ config.\doxymbox{\hyperlink{struct_file_configuration_abe3f5e89da6b151be1c7be61daf7823e}{Display}}();}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00062}00062\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ frame\_address;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00063}00063\ \ \ \ \ \doxymbox{\hyperlink{class_t_l_b}{TLB}}\ cache(config);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00064}00064\ \ \ \ \ \doxymbox{\hyperlink{class_page__table}{Page\_table}}\ pages(config);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00065}00065\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00066}00066\ \ \ \ \ config.\doxymbox{\hyperlink{struct_file_configuration_ac321edb3b8eddc5cb52711678333a15f}{Reading\_Addresses}}();}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00067}00067\ \ \ \ \ pages.\doxymbox{\hyperlink{class_page__table_ac017fffbdc89591ba0e8035f0a81d073}{LOOKAHEADINSERTION}}(config);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00069}00069\ \ \ \ \ \textcolor{keywordtype}{int}\ instruction\_count\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ index\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ it\ =\ config.\doxymbox{\hyperlink{struct_file_configuration_a1bc18aeffd851a643b73313c9fee5e07}{actual\_adress}}.begin();\ it\ !=\ config.\doxymbox{\hyperlink{struct_file_configuration_a1bc18aeffd851a643b73313c9fee5e07}{actual\_adress}}.end();\ it++)\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ address\ =\ *it;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ vpn\ =\ config.\doxymbox{\hyperlink{struct_file_configuration_a3506cceeda4e229e14590e0f6a40d35c}{getVirtual\_page\_number}}(address);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ offset\ =\ config.\doxymbox{\hyperlink{struct_file_configuration_a67365063c1cc7c04bc5bab73af14c817}{offset}}(address);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_write\ =\ (instruction\_count\ \%\ 5\ ==\ 0);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ x;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (is\_write)\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ \textcolor{charliteral}{'W'};}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ \textcolor{charliteral}{'R'};}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ found\ =\ cache.\doxymbox{\hyperlink{class_t_l_b_ac184e51e58504f10d4a4662f10d0ac89}{find}}(vpn,\ frame\_address);\ \ \textcolor{comment}{//this\ is\ the\ TLB\ lookup}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (found)\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ pages.\doxymbox{\hyperlink{class_page__table_a43810c3581d9b9d764f0f4d8be6172f5}{accessPageTableDirectly}}(vpn,\ offset,\ is\_write,\ x);\ \textcolor{comment}{//this\ is\ the\ page\ table\ lookup\ and\ the\ actual\ read/write\ operation\ if\ the\ }}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//cout\ <<\ "{}For\ the\ virtual\ address\ "{}\ <<\ vpn\ <<\ "{}\ the\ frame\ is\ "{}\ <<\ frame\_address\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!found)\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ p\_frame\ =\ pages.\doxymbox{\hyperlink{class_page__table_a43810c3581d9b9d764f0f4d8be6172f5}{accessPageTableDirectly}}(vpn,\ offset,\ is\_write,\ x);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (p\_frame\ ==\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long})\ -\/\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ p\_frame\ =\ pages.\doxymbox{\hyperlink{class_page__table_aea351ddbecf530503ba323d7b77d601c}{OPT\_algorthim\_for\_getting\_pshycal\_number}}(}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vpn,\ offset,\ is\_write,\ cache,\ config.\doxymbox{\hyperlink{struct_file_configuration_a1bc18aeffd851a643b73313c9fee5e07}{actual\_adress}},\ index,\ x}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ cache.\doxymbox{\hyperlink{class_t_l_b_a9a740409b977bdca99df6a697e59376f}{insert\_with\_LRU\_algo}}(vpn,\ p\_frame,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ index++;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ instruction\_count++;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00103}00103\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00105}00105\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}The\ frames\ used\ are\ "{}}\ <<\ pages.\doxymbox{\hyperlink{class_page__table_a42f91c3c8b6cbca5b826c21972ab476d}{getFrame\_count}}();}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00106}00106\ \ \ \ \ cache.\doxymbox{\hyperlink{class_t_l_b_a27fcea8e972cf8f385f57d015170f1e9}{perfomance\_metrics}}(config.\doxymbox{\hyperlink{struct_file_configuration_a83793d02f6190b74a7353b9406aadec9}{latency}},\ \ pages.\doxymbox{\hyperlink{class_page__table_af3ef0655beefd5f18ee4381df5a3f6a0}{ram\_read\_count}},\ pages.\doxymbox{\hyperlink{class_page__table_af1ec0321cc2080094a3aea48b41ea5e6}{ram\_write\_count}},\ pages.\doxymbox{\hyperlink{class_page__table_a74301c0af836bad46bbf7616cfa10a61}{dirty\_evictions}});}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00108}00108\ \}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00110}\doxymbox{\hyperlink{struct_virtual___memory__manager_acea421a8f58bdfc3ddaf10fee33822e5}{00110}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_virtual___memory__manager_acea421a8f58bdfc3ddaf10fee33822e5}{Virtual\_Memory\_manager::Walker}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00112}00112\ \ \ \ \ ofstream\ clear\_disk(\textcolor{stringliteral}{"{}HardDisk.txt"{}},\ ios::trunc);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00113}00113\ \ \ \ \ ofstream\ clear\_disk2(\textcolor{stringliteral}{"{}OPT\_logging"{}},\ ios::trunc);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00114}00114\ \ \ \ \ \doxymbox{\hyperlink{struct_file_configuration}{FileConfiguration}}\ config;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00115}00115\ \ \ \ \ config.\doxymbox{\hyperlink{struct_file_configuration_a008e4c4d93312363acbf5174cee95ae2}{FileParser}}();}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00116}00116\ \ \ \ \ config.\doxymbox{\hyperlink{struct_file_configuration_abe3f5e89da6b151be1c7be61daf7823e}{Display}}();}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00117}00117\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ frame\_address;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00118}00118\ \ \ \ \ \doxymbox{\hyperlink{class_t_l_b}{TLB}}\ cache(config);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00119}00119\ \ \ \ \ \doxymbox{\hyperlink{class_page__table}{Page\_table}}\ pages(config);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00121}00121\ \ \ \ \ config.\doxymbox{\hyperlink{struct_file_configuration_ac321edb3b8eddc5cb52711678333a15f}{Reading\_Addresses}}();}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00123}00123\ \ \ \ \ \textcolor{keywordtype}{int}\ instruction\_count\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00124}00124\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ index\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00125}00125\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ it\ =\ config.\doxymbox{\hyperlink{struct_file_configuration_a1bc18aeffd851a643b73313c9fee5e07}{actual\_adress}}.begin();\ it\ !=\ config.\doxymbox{\hyperlink{struct_file_configuration_a1bc18aeffd851a643b73313c9fee5e07}{actual\_adress}}.end();\ it++)\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ address\ =\ *it;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ vpn\ =\ config.\doxymbox{\hyperlink{struct_file_configuration_a3506cceeda4e229e14590e0f6a40d35c}{getVirtual\_page\_number}}(address);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ offset\ =\ config.\doxymbox{\hyperlink{struct_file_configuration_a67365063c1cc7c04bc5bab73af14c817}{offset}}(address);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00130}00130\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_write\ =\ (instruction\_count\ \%\ 5\ ==\ 0);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ x;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (is\_write)\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ \textcolor{charliteral}{'W'};}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00134}00134\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00135}00135\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ \textcolor{charliteral}{'R'};}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00137}00137\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ found\ =\ cache.\doxymbox{\hyperlink{class_t_l_b_a2b4e9c4020a46aa4eabe87d74bc3b62d}{findFIFOTLB}}(vpn,\ frame\_address);\ \ \textcolor{comment}{//this\ is\ the\ TLB\ lookup}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (found)\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ pages.\doxymbox{\hyperlink{class_page__table_a43810c3581d9b9d764f0f4d8be6172f5}{accessPageTableDirectly}}(vpn,\ offset,\ is\_write,\ x);\ \textcolor{comment}{//this\ is\ the\ page\ table\ lookup\ and\ the\ actual\ read/write\ operation\ if\ the\ }}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!found)\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ p\_frame\ =\ pages.\doxymbox{\hyperlink{class_page__table_a43810c3581d9b9d764f0f4d8be6172f5}{accessPageTableDirectly}}(vpn,\ offset,\ is\_write,\ x);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (p\_frame\ ==\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long})\ -\/\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ p\_frame\ =\ pages.\doxymbox{\hyperlink{class_page__table_a04ea045a1c4046deeebc6ba7e3368c45}{acccess\_using\_FIFO}}(vpn,\ offset,\ is\_write,\ cache,\ \ x);}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ cache.\doxymbox{\hyperlink{class_t_l_b_a07e223fbb12f9cd423bc1996411bdc15}{Insert\_with\_FIFO\_algo}}(vpn,\ p\_frame,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00150}00150\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00152}00152\ \ \ \ \ \ \ \ \ index++;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00153}00153\ \ \ \ \ \ \ \ \ instruction\_count++;}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00154}00154\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00156}00156\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}The\ frames\ used\ are\ "{}}\ <<\ pages.\doxymbox{\hyperlink{class_page__table_a42f91c3c8b6cbca5b826c21972ab476d}{getFrame\_count}}();}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00157}00157\ \ \ \ \ cache.\doxymbox{\hyperlink{class_t_l_b_a27fcea8e972cf8f385f57d015170f1e9}{perfomance\_metrics}}(config.\doxymbox{\hyperlink{struct_file_configuration_a83793d02f6190b74a7353b9406aadec9}{latency}},\ pages.\doxymbox{\hyperlink{class_page__table_af3ef0655beefd5f18ee4381df5a3f6a0}{ram\_read\_count}},\ pages.\doxymbox{\hyperlink{class_page__table_af1ec0321cc2080094a3aea48b41ea5e6}{ram\_write\_count}},\ pages.\doxymbox{\hyperlink{class_page__table_a74301c0af836bad46bbf7616cfa10a61}{dirty\_evictions}});}
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{_virtual___memory__manager_8cpp_source_l00159}00159\ \}}
+
+\end{DoxyCode}

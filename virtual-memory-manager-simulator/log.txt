@@ -1,0 +1,236 @@
+[LRU] Request #0 | Addr: 0x1000 | VPN: 1 | Op: 
+[LRU] Request #1 | Addr: 0x2000 | VPN: 2 | Op: 
+[LRU] Request #2 | Addr: 0x3000 | VPN: 3 | Op: 
+[LRU] Request #3 | Addr: 0x4000 | VPN: 4 | Op: 
+[LRU] Request #4 | Addr: 0x5000 | VPN: 5 | Op: 
+[LRU] Request #5 | Addr: 0x6000 | VPN: 6 | Op: 
+[LRU] Request #6 | Addr: 0x7000 | VPN: 7 | Op: 
+[LRU] Request #7 | Addr: 0x8000 | VPN: 8 | Op: 
+[LRU] Request #8 | Addr: 0x9000 | VPN: 9 | Op: 
+[LRU] Request #9 | Addr: 0xa000 | VPN: 10 | Op: 
+[LRU] Request #10 | Addr: 0xb000 | VPN: 11 | Op: 
+[LRU] Request #11 | Addr: 0xc000 | VPN: 12 | Op: 
+[LRU] Request #12 | Addr: 0xd000 | VPN: 13 | Op: 
+[LRU] Request #13 | Addr: 0xe000 | VPN: 14 | Op: 
+[LRU] Request #14 | Addr: 0xf000 | VPN: 15 | Op: 
+[LRU] Request #15 | Addr: 0x10000 | VPN: 16 | Op: 
+[LRU] Request #16 | Addr: 0x11000 | VPN: 17 | Op: 
+[LRU] Request #17 | Addr: 0x12000 | VPN: 18 | Op: 
+[LRU] Request #18 | Addr: 0x13000 | VPN: 19 | Op: 
+[LRU] Request #19 | Addr: 0x14000 | VPN: 20 | Op: 
+[LRU] Request #20 | Addr: 0x15000 | VPN: 21 | Op: 
+[LRU] Request #21 | Addr: 0x16000 | VPN: 22 | Op: 
+[LRU] Request #22 | Addr: 0x17000 | VPN: 23 | Op: 
+[LRU] Request #23 | Addr: 0x18000 | VPN: 24 | Op: 
+[LRU] Request #24 | Addr: 0x19000 | VPN: 25 | Op: 
+[LRU] Request #25 | Addr: 0x1a000 | VPN: 26 | Op: 
+[LRU] Request #26 | Addr: 0x1b000 | VPN: 27 | Op: 
+[LRU] Request #27 | Addr: 0x1c000 | VPN: 28 | Op: 
+[LRU] Request #28 | Addr: 0x1d000 | VPN: 29 | Op: 
+[LRU] Request #29 | Addr: 0x1e000 | VPN: 30 | Op: 
+[LRU] Request #30 | Addr: 0x1f000 | VPN: 31 | Op: 
+[LRU] Request #31 | Addr: 0x20000 | VPN: 32 | Op: 
+[LRU] Request #32 | Addr: 0x21000 | VPN: 33 | Op: 
+[LRU] Request #33 | Addr: 0x22000 | VPN: 34 | Op: 
+[LRU] Request #34 | Addr: 0x23000 | VPN: 35 | Op: 
+[LRU] Request #35 | Addr: 0x24000 | VPN: 36 | Op: 
+[LRU] Request #36 | Addr: 0x25000 | VPN: 37 | Op: 
+[LRU] Request #37 | Addr: 0x26000 | VPN: 38 | Op: 
+[LRU] Request #38 | Addr: 0x27000 | VPN: 39 | Op: 
+[LRU] Request #39 | Addr: 0x28000 | VPN: 40 | Op: 
+[LRU] Request #40 | Addr: 0x29000 | VPN: 41 | Op: 
+[LRU] Request #41 | Addr: 0x2a000 | VPN: 42 | Op: 
+[LRU] Request #42 | Addr: 0x2b000 | VPN: 43 | Op: 
+[LRU] Request #43 | Addr: 0x2c000 | VPN: 44 | Op: 
+[LRU] Request #44 | Addr: 0x2d000 | VPN: 45 | Op: 
+[LRU] Request #45 | Addr: 0x2e000 | VPN: 46 | Op: 
+[LRU] Request #46 | Addr: 0x2f000 | VPN: 47 | Op: 
+[LRU] Request #47 | Addr: 0x30000 | VPN: 48 | Op: 
+[LRU] Request #48 | Addr: 0x31000 | VPN: 49 | Op: 
+[LRU] Request #49 | Addr: 0x32000 | VPN: 50 | Op: 
+[LRU] Request #50 | Addr: 0x33000 | VPN: 51 | Op: 
+[LRU] Request #51 | Addr: 0x34000 | VPN: 52 | Op: 
+[LRU] Request #52 | Addr: 0x35000 | VPN: 53 | Op: 
+[LRU] Request #53 | Addr: 0x36000 | VPN: 54 | Op: 
+[LRU] Request #54 | Addr: 0x37000 | VPN: 55 | Op: 
+[LRU] Request #55 | Addr: 0x38000 | VPN: 56 | Op: 
+[LRU] Request #56 | Addr: 0x39000 | VPN: 57 | Op: 
+[LRU] Request #57 | Addr: 0x3a000 | VPN: 58 | Op: 
+[LRU] Request #58 | Addr: 0x3b000 | VPN: 59 | Op: 
+[LRU] Request #59 | Addr: 0x3c000 | VPN: 60 | Op: 
+[LRU] Request #60 | Addr: 0x3d000 | VPN: 61 | Op: 
+[LRU] Request #61 | Addr: 0x3e000 | VPN: 62 | Op: 
+[LRU] Request #62 | Addr: 0x3f000 | VPN: 63 | Op: 
+[LRU] Request #63 | Addr: 0x40000 | VPN: 64 | Op: 
+[LRU] Request #64 | Addr: 0x1000 | VPN: 1 | Op: 
+[LRU] Request #65 | Addr: 0x2000 | VPN: 2 | Op: 
+[LRU] Request #66 | Addr: 0x3000 | VPN: 3 | Op: 
+[LRU] Request #67 | Addr: 0x4000 | VPN: 4 | Op: 
+[LRU] Request #68 | Addr: 0x5000 | VPN: 5 | Op: 
+[LRU] Request #69 | Addr: 0x1000 | VPN: 1 | Op: 
+[LRU] Request #70 | Addr: 0x2000 | VPN: 2 | Op: 
+[LRU] Request #71 | Addr: 0x3000 | VPN: 3 | Op: 
+[LRU] Request #72 | Addr: 0x4000 | VPN: 4 | Op: 
+[LRU] Request #73 | Addr: 0x5000 | VPN: 5 | Op: 
+[LRU] Request #74 | Addr: 0x1000 | VPN: 1 | Op: 
+[LRU] Request #75 | Addr: 0x2000 | VPN: 2 | Op: 
+[LRU] Request #76 | Addr: 0x3000 | VPN: 3 | Op: 
+[LRU] Request #77 | Addr: 0x4000 | VPN: 4 | Op: 
+[LRU] Request #78 | Addr: 0x5000 | VPN: 5 | Op: 
+--- EVICTION NOTICE: VPN 6 was DIRTY. Writing back to Disk
+[LRU] Request #79 | Addr: 0x41000 | VPN: 65 | Op: 
+--- EVICTION NOTICE: VPN 7 was CLEAN. Discarding ---
+[LRU] Request #80 | Addr: 0x42000 | VPN: 66 | Op: 
+--- EVICTION NOTICE: VPN 8 was CLEAN. Discarding ---
+[LRU] Request #81 | Addr: 0x43000 | VPN: 67 | Op: 
+--- EVICTION NOTICE: VPN 9 was CLEAN. Discarding ---
+[LRU] Request #82 | Addr: 0x44000 | VPN: 68 | Op: 
+--- EVICTION NOTICE: VPN 10 was CLEAN. Discarding ---
+[LRU] Request #83 | Addr: 0x45000 | VPN: 69 | Op: 
+--- EVICTION NOTICE: VPN 11 was DIRTY. Writing back to Disk
+[LRU] Request #84 | Addr: 0x46000 | VPN: 70 | Op: 
+--- EVICTION NOTICE: VPN 12 was CLEAN. Discarding ---
+[LRU] Request #85 | Addr: 0x47000 | VPN: 71 | Op: 
+--- EVICTION NOTICE: VPN 13 was CLEAN. Discarding ---
+[LRU] Request #86 | Addr: 0x48000 | VPN: 72 | Op: 
+--- EVICTION NOTICE: VPN 14 was CLEAN. Discarding ---
+[LRU] Request #87 | Addr: 0x49000 | VPN: 73 | Op: 
+--- EVICTION NOTICE: VPN 15 was CLEAN. Discarding ---
+[LRU] Request #88 | Addr: 0x4a000 | VPN: 74 | Op: 
+--- EVICTION NOTICE: VPN 16 was DIRTY. Writing back to Disk
+[LRU] Request #89 | Addr: 0x4b000 | VPN: 75 | Op: 
+--- EVICTION NOTICE: VPN 17 was CLEAN. Discarding ---
+[LRU] Request #90 | Addr: 0x4c000 | VPN: 76 | Op: 
+--- EVICTION NOTICE: VPN 18 was CLEAN. Discarding ---
+[LRU] Request #91 | Addr: 0x4d000 | VPN: 77 | Op: 
+--- EVICTION NOTICE: VPN 19 was CLEAN. Discarding ---
+[LRU] Request #92 | Addr: 0x4e000 | VPN: 78 | Op: 
+--- EVICTION NOTICE: VPN 20 was CLEAN. Discarding ---
+[LRU] Request #93 | Addr: 0x4f000 | VPN: 79 | Op: 
+--- EVICTION NOTICE: VPN 21 was DIRTY. Writing back to Disk
+[LRU] Request #94 | Addr: 0x50000 | VPN: 80 | Op: 
+--- EVICTION NOTICE: VPN 22 was CLEAN. Discarding ---
+[LRU] Request #95 | Addr: 0x51000 | VPN: 81 | Op: 
+--- EVICTION NOTICE: VPN 23 was CLEAN. Discarding ---
+[LRU] Request #96 | Addr: 0x52000 | VPN: 82 | Op: 
+--- EVICTION NOTICE: VPN 24 was CLEAN. Discarding ---
+[LRU] Request #97 | Addr: 0x53000 | VPN: 83 | Op: 
+--- EVICTION NOTICE: VPN 25 was CLEAN. Discarding ---
+[LRU] Request #98 | Addr: 0x54000 | VPN: 84 | Op: 
+--- EVICTION NOTICE: VPN 26 was DIRTY. Writing back to Disk
+[LRU] Request #99 | Addr: 0x55000 | VPN: 85 | Op: 
+[LRU] Request #100 | Addr: 0x1000 | VPN: 1 | Op: 
+[LRU] Request #101 | Addr: 0x2000 | VPN: 2 | Op: 
+[LRU] Request #102 | Addr: 0x3000 | VPN: 3 | Op: 
+[LRU] Request #103 | Addr: 0x4000 | VPN: 4 | Op: 
+[LRU] Request #104 | Addr: 0x5000 | VPN: 5 | Op: 
+[LRU] Request #105 | Addr: 0x1000 | VPN: 1 | Op: 
+[LRU] Request #106 | Addr: 0x2000 | VPN: 2 | Op: 
+[LRU] Request #107 | Addr: 0x3000 | VPN: 3 | Op: 
+[LRU] Request #108 | Addr: 0x4000 | VPN: 4 | Op: 
+[LRU] Request #109 | Addr: 0x5000 | VPN: 5 | Op: 
+--- EVICTION NOTICE: VPN 27 was CLEAN. Discarding ---
+[LRU] Request #110 | Addr: 0x56000 | VPN: 86 | Op: 
+--- EVICTION NOTICE: VPN 28 was CLEAN. Discarding ---
+[LRU] Request #111 | Addr: 0x57000 | VPN: 87 | Op: 
+--- EVICTION NOTICE: VPN 29 was CLEAN. Discarding ---
+[LRU] Request #112 | Addr: 0x58000 | VPN: 88 | Op: 
+--- EVICTION NOTICE: VPN 30 was CLEAN. Discarding ---
+[LRU] Request #113 | Addr: 0x59000 | VPN: 89 | Op: 
+--- EVICTION NOTICE: VPN 31 was DIRTY. Writing back to Disk
+[LRU] Request #114 | Addr: 0x5a000 | VPN: 90 | Op: 
+--- EVICTION NOTICE: VPN 32 was CLEAN. Discarding ---
+[LRU] Request #115 | Addr: 0x5b000 | VPN: 91 | Op: 
+--- EVICTION NOTICE: VPN 33 was CLEAN. Discarding ---
+[LRU] Request #116 | Addr: 0x5c000 | VPN: 92 | Op: 
+--- EVICTION NOTICE: VPN 34 was CLEAN. Discarding ---
+[LRU] Request #117 | Addr: 0x5d000 | VPN: 93 | Op: 
+--- EVICTION NOTICE: VPN 35 was CLEAN. Discarding ---
+[LRU] Request #118 | Addr: 0x5e000 | VPN: 94 | Op: 
+--- EVICTION NOTICE: VPN 36 was DIRTY. Writing back to Disk
+[LRU] Request #119 | Addr: 0x5f000 | VPN: 95 | Op: 
+--- EVICTION NOTICE: VPN 37 was CLEAN. Discarding ---
+[LRU] Request #120 | Addr: 0x60000 | VPN: 96 | Op: 
+--- EVICTION NOTICE: VPN 38 was CLEAN. Discarding ---
+[LRU] Request #121 | Addr: 0x61000 | VPN: 97 | Op: 
+--- EVICTION NOTICE: VPN 39 was CLEAN. Discarding ---
+[LRU] Request #122 | Addr: 0x62000 | VPN: 98 | Op: 
+--- EVICTION NOTICE: VPN 40 was CLEAN. Discarding ---
+[LRU] Request #123 | Addr: 0x63000 | VPN: 99 | Op: 
+--- EVICTION NOTICE: VPN 41 was DIRTY. Writing back to Disk
+[LRU] Request #124 | Addr: 0x64000 | VPN: 100 | Op: 
+--- EVICTION NOTICE: VPN 42 was CLEAN. Discarding ---
+[LRU] Request #125 | Addr: 0x65000 | VPN: 101 | Op: 
+--- EVICTION NOTICE: VPN 43 was CLEAN. Discarding ---
+[LRU] Request #126 | Addr: 0x66000 | VPN: 102 | Op: 
+--- EVICTION NOTICE: VPN 44 was CLEAN. Discarding ---
+[LRU] Request #127 | Addr: 0x67000 | VPN: 103 | Op: 
+--- EVICTION NOTICE: VPN 45 was CLEAN. Discarding ---
+[LRU] Request #128 | Addr: 0x68000 | VPN: 104 | Op: 
+--- EVICTION NOTICE: VPN 46 was DIRTY. Writing back to Disk
+[LRU] Request #129 | Addr: 0x69000 | VPN: 105 | Op: 
+[LRU] Request #130 | Addr: 0x1000 | VPN: 1 | Op: 
+[LRU] Request #131 | Addr: 0x2000 | VPN: 2 | Op: 
+[LRU] Request #132 | Addr: 0x3000 | VPN: 3 | Op: 
+[LRU] Request #133 | Addr: 0x4000 | VPN: 4 | Op: 
+[LRU] Request #134 | Addr: 0x5000 | VPN: 5 | Op: 
+[LRU] Request #135 | Addr: 0x1000 | VPN: 1 | Op: 
+[LRU] Request #136 | Addr: 0x2000 | VPN: 2 | Op: 
+[LRU] Request #137 | Addr: 0x3000 | VPN: 3 | Op: 
+[LRU] Request #138 | Addr: 0x4000 | VPN: 4 | Op: 
+[LRU] Request #139 | Addr: 0x5000 | VPN: 5 | Op: 
+[LRU] Request #140 | Addr: 0x1000 | VPN: 1 | Op: 
+[LRU] Request #141 | Addr: 0x2000 | VPN: 2 | Op: 
+[LRU] Request #142 | Addr: 0x3000 | VPN: 3 | Op: 
+[LRU] Request #143 | Addr: 0x4000 | VPN: 4 | Op: 
+[LRU] Request #144 | Addr: 0x5000 | VPN: 5 | Op: 
+--- EVICTION NOTICE: VPN 47 was CLEAN. Discarding ---
+[LRU] Request #145 | Addr: 0x6a000 | VPN: 106 | Op: 
+--- EVICTION NOTICE: VPN 48 was CLEAN. Discarding ---
+[LRU] Request #146 | Addr: 0x6b000 | VPN: 107 | Op: 
+--- EVICTION NOTICE: VPN 49 was CLEAN. Discarding ---
+[LRU] Request #147 | Addr: 0x6c000 | VPN: 108 | Op: 
+--- EVICTION NOTICE: VPN 50 was CLEAN. Discarding ---
+[LRU] Request #148 | Addr: 0x6d000 | VPN: 109 | Op: 
+--- EVICTION NOTICE: VPN 51 was DIRTY. Writing back to Disk
+[LRU] Request #149 | Addr: 0x6e000 | VPN: 110 | Op: 
+--- EVICTION NOTICE: VPN 52 was CLEAN. Discarding ---
+[LRU] Request #150 | Addr: 0x6f000 | VPN: 111 | Op: 
+--- EVICTION NOTICE: VPN 53 was CLEAN. Discarding ---
+[LRU] Request #151 | Addr: 0x70000 | VPN: 112 | Op: 
+--- EVICTION NOTICE: VPN 54 was CLEAN. Discarding ---
+[LRU] Request #152 | Addr: 0x71000 | VPN: 113 | Op: 
+--- EVICTION NOTICE: VPN 55 was CLEAN. Discarding ---
+[LRU] Request #153 | Addr: 0x72000 | VPN: 114 | Op: 
+--- EVICTION NOTICE: VPN 56 was DIRTY. Writing back to Disk
+[LRU] Request #154 | Addr: 0x73000 | VPN: 115 | Op: 
+[LRU] Request #155 | Addr: 0x1000 | VPN: 1 | Op: 
+[LRU] Request #156 | Addr: 0x2000 | VPN: 2 | Op: 
+[LRU] Request #157 | Addr: 0x3000 | VPN: 3 | Op: 
+[LRU] Request #158 | Addr: 0x4000 | VPN: 4 | Op: 
+[LRU] Request #159 | Addr: 0x5000 | VPN: 5 | Op: 
+--- EVICTION NOTICE: VPN 57 was CLEAN. Discarding ---
+[LRU] Request #160 | Addr: 0x74000 | VPN: 116 | Op: 
+--- EVICTION NOTICE: VPN 58 was CLEAN. Discarding ---
+[LRU] Request #161 | Addr: 0x75000 | VPN: 117 | Op: 
+--- EVICTION NOTICE: VPN 59 was CLEAN. Discarding ---
+[LRU] Request #162 | Addr: 0x76000 | VPN: 118 | Op: 
+--- EVICTION NOTICE: VPN 60 was CLEAN. Discarding ---
+[LRU] Request #163 | Addr: 0x77000 | VPN: 119 | Op: 
+--- EVICTION NOTICE: VPN 61 was DIRTY. Writing back to Disk
+[LRU] Request #164 | Addr: 0x78000 | VPN: 120 | Op: 
+--- EVICTION NOTICE: VPN 62 was CLEAN. Discarding ---
+[LRU] Request #165 | Addr: 0x79000 | VPN: 121 | Op: 
+--- EVICTION NOTICE: VPN 63 was CLEAN. Discarding ---
+[LRU] Request #166 | Addr: 0x7a000 | VPN: 122 | Op: 
+--- EVICTION NOTICE: VPN 64 was CLEAN. Discarding ---
+[LRU] Request #167 | Addr: 0x7b000 | VPN: 123 | Op: 
+--- EVICTION NOTICE: VPN 65 was CLEAN. Discarding ---
+[LRU] Request #168 | Addr: 0x7c000 | VPN: 124 | Op: 
+--- EVICTION NOTICE: VPN 66 was DIRTY. Writing back to Disk
+[LRU] Request #169 | Addr: 0x7d000 | VPN: 125 | Op: 
+[LRU] Request #170 | Addr: 0x1000 | VPN: 1 | Op: 
+[LRU] Request #171 | Addr: 0x2000 | VPN: 2 | Op: 
+[LRU] Request #172 | Addr: 0x3000 | VPN: 3 | Op: 
+[LRU] Request #173 | Addr: 0x4000 | VPN: 4 | Op: 
+[LRU] Request #174 | Addr: 0x5000 | VPN: 5 | Op: 
