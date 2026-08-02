@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="WFB.vcxproj" Id="846ac436-06eb-4c59-b1f5-72e456c5bfdc" />
+</Solution>
