@@ -1,8 +1,31 @@
 # Computer Science Practice Projects & Algorithms Portfolio
 
-A comprehensive collection of 124+ production-grade practice projects covering Data Structures, Algorithms, Operating System Kernels, and Object-Oriented Software Design in C++, C#, and C.
+A comprehensive, enterprise-grade portfolio featuring **124+ production-ready computer science modules** across Data Structures, Algorithms, Operating Systems Kernels, Systems Programming, and Object-Oriented Software Design in C++, C#, and C.
 
-## 📁 Project Modules Index
+---
+
+## 🌟 Key Highlights & Core Domains
+
+### 1. Data Structures & Memory Management
+- **Self-Balancing Search Trees**: AVL Trees (balance factor recalculation, single/double rotations) and B-Trees (multi-way search indexing).
+- **Linear Data Structures**: Singly, Doubly, and Circular Linked Lists with tail pointers, dynamic reallocation, and node swap mechanics.
+- **Prefix Tries & String Search**: Fast autocomplete engines with multi-branch node insertion and retrieval.
+- **Heaps & Priority Queues**: Max-Heap and Min-Heap binary trees with automated heapify and array visualizers.
+- **Hash Tables**: Custom hash maps with separate chaining and hybrid AVL tree collision resolution.
+
+### 2. Systems Programming & Operating Systems
+- **Virtual Memory Manager**: Page framing, Translation Lookaside Buffer (TLB) simulator, FIFO/OPT page replacement logging.
+- **Process Scheduling**: Multi-threaded process scheduling algorithms and system execution buffers.
+- **Data Compression**: Lossless file compression engines utilizing Huffman Coding frequency trees.
+
+### 3. Software Architecture & GUI Applications
+- **Desktop Applications**: C++/CLI graphical dictionary system with WinForms interfaces.
+- **C# (.NET Core)**: High-performance console engine architectures and modular systems.
+- **Object-Oriented Design**: Polymorphism, abstract classes, virtual functions, friend operator overloading, and deep/shallow copy memory models.
+
+---
+
+## 📁 Comprehensive Project Modules Index
 
 | # | Professional Project Module | Directory Link |
 |---|----------------------------|----------------|
@@ -65,7 +88,7 @@ A comprehensive collection of 124+ production-grade practice projects covering D
 | 57 | **Dynamic Array Resizing & Capacity Expansion** | [dynamic-array-capacity-expansion](./dynamic-array-capacity-expansion) |
 | 58 | **Dynamic Array Processing & Pointer Arithmetic** | [dynamic-array-pointer-arithmetic](./dynamic-array-pointer-arithmetic) |
 | 59 | **Linear Data Structures & Dynamic Array Reallocation** | [dynamic-array-reallocation](./dynamic-array-reallocation) |
-| 60 | **Dynamic Array Resizing & Capacity Expansion** | [dynamic-array-resizing-mechanics](./dynamic-array-resizing-mechanics) |
+| 60 | **Dynamic Array Resizing Mechanics** | [dynamic-array-resizing-mechanics](./dynamic-array-resizing-mechanics) |
 | 61 | **Dynamic Buffer & Queue Implementation** | [dynamic-buffer-queue](./dynamic-buffer-queue) |
 | 62 | **Dynamic Memory Allocation & Structural Pointers** | [dynamic-memory-structural-pointers](./dynamic-memory-structural-pointers) |
 | 63 | **Efficient File Buffer Manager** | [efficient-file-buffer-manager](./efficient-file-buffer-manager) |
@@ -130,3 +153,33 @@ A comprehensive collection of 124+ production-grade practice projects covering D
 | 122 | **Trie Node Structure & Key Ingestion Engine** | [trie-key-ingestion-engine](./trie-key-ingestion-engine) |
 | 123 | **Virtual Memory Manager, Page Framing & TLB Simulator** | [virtual-memory-manager-simulator](./virtual-memory-manager-simulator) |
 | 124 | **Workflow Engine Buffer Implementation** | [workflow-buffer-engine](./workflow-buffer-engine) |
+
+---
+
+## 🛠️ Build & Compilation Guide
+
+### C++ Projects (Visual Studio / MSVC)
+1. Open the `.slnx` or `.vcxproj` solution file located inside any project directory using Visual Studio 2022+.
+2. Select target configuration (`Release | x64` or `Debug | x64`).
+3. Build & Run using `Ctrl + F5` or `F5`.
+
+### C++ Command Line Compilation (GCC / Clang)
+Navigate to the module directory and compile directly:
+```bash
+g++ -std=c++20 -O3 *.cpp -o main
+./main
+```
+
+### C# (.NET) Projects
+Navigate to the C# module directory:
+```bash
+dotnet build
+dotnet run
+```
+
+---
+
+## 👤 Author & Maintainer
+- **Developer**: Mohammad Usman Irshad
+- **GitHub**: [@usman-irshad1](https://github.com/usman-irshad1)
+- **Repository**: [`-practice-projects-portfolio`](https://github.com/usman-irshad1/-practice-projects-portfolio)
