@@ -179,7 +179,8 @@ dotnet run
 
 ---
 
-## 👤 Author & Maintainer
+## 👤 Author & License
 - **Developer**: Mohammad Usman Irshad
 - **GitHub**: [@usman-irshad1](https://github.com/usman-irshad1)
-- **Repository**: [`-practice-projects-portfolio`](https://github.com/usman-irshad1/-practice-projects-portfolio)
+- **Repository**: [`cs-practice-projects-portfolio`](https://github.com/usman-irshad1/cs-practice-projects-portfolio)
+- **License**: Distributed under the [MIT License](LICENSE).
