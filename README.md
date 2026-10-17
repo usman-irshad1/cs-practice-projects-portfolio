@@ -1,6 +1,8 @@
 # Computer Science Practice Projects & Algorithms Portfolio
 
-A comprehensive, enterprise-grade portfolio featuring **124+ production-ready computer science modules** across Data Structures, Algorithms, Operating Systems Kernels, Systems Programming, and Object-Oriented Software Design in C++, C#, and C.
+An educational archive of **124+ foundational computer science practice modules and coursework implementations** covering Data Structures, Algorithms, Operating Systems simulation concepts, and Object-Oriented Programming in C++, C#, and C.
+
+> **Scope Note:** This repository is a consolidated learning and practice collection built during undergraduate computer science and engineering coursework. For full standalone systems projects, see [`simpec`](https://github.com/usman-irshad1/simpec), [`Memory-Simulator-System`](https://github.com/usman-irshad1/Memory-Simulator-System), and [`Autonomous-Drone-Swarm-Simulator`](https://github.com/usman-irshad1/Autonomous-Drone-Swarm-Simulator).
 
 ---
 
